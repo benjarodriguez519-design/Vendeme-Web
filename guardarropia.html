@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<title>Guardarropía Vendeme — Un ticket, tu prenda</title>
+<meta name="description" content="Guardarropía Vendeme: cada prenda queda asociada a tu carnet o RUT con Vendeme Check, y se retira quemando el ticket o buscando por identidad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html" aria-label="Vendeme — inicio"><img src="assets/img/logo.png" alt="Vendeme"></a>
+    <ul class="nav-links">
+      <li><a href="ticketing.html">Ticketing</a></li>
+      <li><a href="check.html">Check</a></li>
+      <li><a href="pos.html">POS</a></li>
+      <li><a href="totems.html">Tótems</a></li>
+      <li><a href="guardarropia.html">Guardarropía</a></li>
+      <li><a href="clientes.html">Clientes</a></li>
+    </ul>
+    <div class="nav-buttons">
+      <a class="nav-cta" href="https://clientes.vendeme.app">Acceso clientes</a>
+      <a class="nav-cta-primary" href="https://app.vendeme.app/">Compra tus entradas</a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg class="i-open" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile">
+    <div class="wrap">
+      <ul>
+        <li><a href="ticketing.html">Ticketing</a></li>
+        <li><a href="check.html">Check</a></li>
+        <li><a href="pos.html">POS</a></li>
+        <li><a href="totems.html">Tótems</a></li>
+        <li><a href="guardarropia.html">Guardarropía</a></li>
+        <li><a href="clientes.html">Clientes</a></li>
+      </ul>
+      <div class="nav-mobile-actions">
+        <a class="nav-cta" href="https://clientes.vendeme.app">Acceso clientes</a>
+        <a class="nav-cta-primary" href="https://app.vendeme.app/">Compra tus entradas</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap breadcrumb"><a href="index.html">← Volver al inicio</a></div>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="kicker">Guardarropía</div>
+      <h1>Cada prenda, a tu nombre.</h1>
+      <p class="hero-sub">En Guardarropía, <a href="check.html" class="inline-link">Vendeme Check</a> asocia tu ticket a tu RUT o carnet. Seguridad para ti, orden para el equipo.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://wa.me/56975404201?text=Hola%20Vendeme%2C%20quiero%20saber%20m%C3%A1s%20de%20sus%20servicios">Hablemos de Guardarropía</a>
+        <a class="btn-ghost" href="#guardarropia-pin">Ver cómo funciona</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="pin-wrap" id="guardarropia-pin" style="height:320vh;">
+    <div class="pin-inner">
+      <div class="pin-left">
+        <div class="pin-kicker">Vendeme Check · Guardarropía</div>
+        <div class="pin-text-col">
+          <div class="pin-stage active">
+            <h2>Un ticket por prenda.</h2>
+            <p>Cada abrigo o bolso que se recibe queda registrado con un ticket asociado al carnet o RUT de la persona.</p>
+          </div>
+          <div class="pin-stage">
+            <h2>Se retira quemando el ticket.</h2>
+            <p><a href="check.html" class="inline-link">Vendeme Check</a> valida el ticket de guardarropía con el mismo principio que usa en la puerta: escanea, confirma, registra.</p>
+          </div>
+          <div class="pin-stage">
+            <h2>¿Se perdió el ticket? Se busca por RUT.</h2>
+            <p>Check también puede escanear el carnet para encontrar y coincidir la prenda correspondiente, sin depender del papel.</p>
+          </div>
+        </div>
+        <div class="pin-progress">
+          <div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+      </div>
+
+      <div class="pin-visual-col">
+        <div class="device-frame" id="guardarropia-device" style="--tilt:-8deg;">
+          <div class="notch"></div>
+          <div class="device-screen">
+            <div class="screen-panel active" data-stage="0">
+              <p class="mock-title">Ingreso de la prenda</p>
+              <div class="device-row"><span>Ticket</span><strong>#0842</strong></div>
+              <div class="device-row"><span>Asociado a</span><strong>RUT 18.4XX.XXX-X</strong></div>
+              <div class="device-row"><span>Prenda</span><span class="up">Registrada</span></div>
+              <div class="device-row"><span>Estado</span><span class="up">A tu nombre</span></div>
+            </div>
+            <div class="screen-panel" data-stage="1">
+              <p class="mock-title">Quema el ticket</p>
+              <div class="device-row"><span>Escaneando ticket…</span><span class="up">✓</span></div>
+              <div class="device-row"><span>Ticket #0842</span><strong>Válido</strong></div>
+              <div class="device-row"><span>Uso</span><strong>Primera vez</strong></div>
+              <div class="device-row"><span>Resultado</span><span class="up">Quemado</span></div>
+            </div>
+            <div class="screen-panel" data-stage="2">
+              <p class="mock-title">Busca por RUT o carnet</p>
+              <div class="device-row"><span>Escaneando carnet…</span><span class="up">✓</span></div>
+              <div class="device-row"><span>RUT 18.4XX.XXX-X</span><strong>2 prendas</strong></div>
+              <div class="device-row"><span>Abrigo negro</span><strong>Percha 27</strong></div>
+              <div class="device-row"><span>Bolso</span><strong>Percha 31</strong></div>
+              <div class="device-row"><span>Resultado</span><span class="up">Entrega confirmada</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="content-block has-visual" id="detalle">
+    <div class="wrap">
+      <div class="split-block">
+        <div class="split-copy">
+          <div class="kicker">Ingreso</div>
+          <h2>Tu prenda, con tu nombre encima</h2>
+          <p>No es solo un abrigo: es cualquier prenda, bolso o pertenencia que entra a la guardarropía. Cada una queda registrada con un ticket asociado a ti, no solo a un número: al carnet o RUT de la persona que la dejó.</p>
+          <p>Si el ticket se pierde o no se encuentra, Check permite buscar por RUT o carnet para ubicar y coincidir la prenda correspondiente.</p>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <div class="vc-ticket-stage">
+            <div class="claim-ticket scanning">
+              <div class="claim-ticket-top">
+                <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="60" cy="22" r="7" stroke="#ff5723" stroke-width="2.5"/>
+                  <path d="M60 29v8M40 82l20-45 20 45" stroke="#a79c8e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M32 60h56" stroke="#a79c8e" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="claim-ticket-rule"></div>
+              <div class="claim-ticket-row"><span>Ticket</span><strong>#0842</strong></div>
+              <div class="claim-ticket-row"><span>Asociado a</span><strong>RUT 18.4XX.XXX-X</strong></div>
+              <div class="claim-ticket-row"><span>Prenda</span><strong>Abrigo negro</strong></div>
+              <div class="claim-ticket-row"><span>Estado</span><strong class="up">A tu nombre ✓</strong></div>
+              <div class="claim-scan"></div>
+              <div class="claim-stamp">ENTREGADO</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-block alt has-visual">
+    <div class="wrap">
+      <div class="split-block reverse">
+        <div class="split-copy">
+          <div class="kicker kicker-app"><img class="kicker-icon" src="assets/img/app-icon-check.png" alt="" width="26" height="26" loading="lazy">Vendeme Check</div>
+          <h2>Guardarropía funciona sobre <a href="check.html" class="inline-link">Vendeme Check</a></h2>
+          <p>El mismo equipo que valida entradas y consumos en la puerta puede operar la guardarropía.</p>
+          <p>Un ticket, una validación, un registro: el mismo principio en todos los puntos del evento.</p>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <div class="vc">
+            <div class="vc-label"><span>Dos formas de encontrar la prenda</span></div>
+            <div class="vc-merge">
+              <div class="vc-merge-in">
+                <div class="vc-chip"><small>Escanea el ticket</small><strong>#0842</strong></div>
+                <div class="vc-chip"><small>O el carnet</small><strong>RUT 18.4XX.XXX-X</strong></div>
+              </div>
+              <svg class="vc-merge-svg" viewBox="0 0 44 100" preserveAspectRatio="none"><path d="M0 25C22 25 22 50 44 50"/><path d="M0 75C22 75 22 50 44 50"/></svg>
+              <div class="vc-merge-arrow">↓</div>
+              <div class="vc-merge-out">
+                <div class="vc-chip out"><small>Mismo registro</small><strong>Prenda #0842</strong><span>Abrigo negro · A tu nombre</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="big-statement">
+    <div class="wrap">
+      <p>Un ticket. <span class="accent">Una validación.</span> Un registro.</p>
+    </div>
+  </section>
+
+  <section class="content-block alt has-visual">
+    <div class="wrap">
+      <div class="split-block">
+        <div class="split-copy">
+          <div class="kicker">Entrega</div>
+          <h2>Entrega segura, sin depender de la memoria del equipo</h2>
+          <p>Al momento del retiro, Check confirma que el ticket —o la identificación asociada— corresponde a la prenda antes de entregarla.</p>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <div class="vc">
+            <div class="vc-label"><span>Retiro de prenda</span><span class="vc-live">Verificando</span></div>
+            <div class="vc-result valid">
+              <span class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>Ticket #0842 válido</strong><span class="sub">Primera vez que se usa</span></div>
+            </div>
+            <div class="vc-result valid">
+              <span class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>Identidad coincide</strong><span class="sub">RUT 18.4XX.XXX-X</span></div>
+            </div>
+            <div class="vc-result valid">
+              <span class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>Prenda correcta</strong><span class="sub">Abrigo negro · Percha 27</span></div>
+            </div>
+            <div class="vc-pay" style="margin-top:16px;">Confirmar entrega</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="wrap">
+      <h2>Hablemos de tu guardarropía</h2>
+      <p>Te mostramos cómo Check opera la guardarropía en un evento real.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://wa.me/56975404201?text=Hola%20Vendeme%2C%20quiero%20saber%20m%C3%A1s%20de%20sus%20servicios">Hablemos de tu guardarropía</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="footer-logo" href="index.html" aria-label="Vendeme — inicio"><img src="assets/img/logo.png" alt="Vendeme"></a>
+        <p class="footer-tag">Entradas, puerta, guardarropía, tótems y barra.</p>
+      </div>
+      <div class="footer-col footer-apps">
+        <p class="col-title">Apps</p>
+        <div class="app-row">
+          <img class="app-icon" src="assets/img/app-icon-app.png" alt="" width="40" height="40" loading="lazy">
+          <div class="app-row-body">
+            <span class="app-name">Vendeme App</span>
+            <span class="app-plat"><a href="https://apps.apple.com/cl/app/vendeme/id995637028">iOS</a><span class="sep">·</span><a href="https://play.google.com/store/apps/details?id=cl.bazo.vendemeapp&amp;hl=es_419">Android</a></span>
+          </div>
+        </div>
+        <div class="app-row">
+          <img class="app-icon" src="assets/img/app-icon-clientes.png" alt="" width="40" height="40" loading="lazy">
+          <div class="app-row-body">
+            <span class="app-name">Vendeme Clientes</span>
+            <span class="app-plat"><a href="https://apps.apple.com/cl/app/vendeme-clientes/id6499478332">iOS</a><span class="sep">·</span><a href="https://play.google.com/store/apps/details?id=cl.bazo.vendemeclient&amp;hl=es_CL">Android</a></span>
+          </div>
+        </div>
+        <div class="app-row">
+          <img class="app-icon" src="assets/img/app-icon-check.png" alt="" width="40" height="40" loading="lazy">
+          <div class="app-row-body">
+            <span class="app-name">Vendeme Check</span>
+            <span class="app-plat"><a href="https://apps.apple.com/cl/app/vendeme-check/id1490351162">iOS</a><span class="sep">·</span><a href="https://play.google.com/store/apps/details?id=cl.bazo.vendemecheck&amp;hl=es_CL">Android</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="col-title">Empresa</p>
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="col-title">Legal</p>
+        <ul>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">English</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Bazo SpA · © 2026 · Todos los derechos reservados.</span>
+      <span>Hecho en Chile</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
+
+</body>
+</html>

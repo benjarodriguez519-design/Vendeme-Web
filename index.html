@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<title>Vendeme — Tu evento, de la entrada al último trago</title>
+<meta name="description" content="Ticketing, puerta, tótems, POS y guardarropía en un solo ecosistema. Tecnología para eventos, hecha en terreno en Chile.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Vendeme — inicio"><img src="assets/img/logo.png" alt="Vendeme"></a>
+    <ul class="nav-links">
+      <li><a href="ticketing.html">Ticketing</a></li>
+      <li><a href="check.html">Check</a></li>
+      <li><a href="pos.html">POS</a></li>
+      <li><a href="totems.html">Tótems</a></li>
+      <li><a href="guardarropia.html">Guardarropía</a></li>
+      <li><a href="clientes.html">Clientes</a></li>
+    </ul>
+    <div class="nav-buttons">
+      <a class="nav-cta" href="https://clientes.vendeme.app">Acceso clientes</a>
+      <a class="nav-cta-primary" href="https://app.vendeme.app/">Compra tus entradas</a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg class="i-open" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile">
+    <div class="wrap">
+      <ul>
+        <li><a href="ticketing.html">Ticketing</a></li>
+        <li><a href="check.html">Check</a></li>
+        <li><a href="pos.html">POS</a></li>
+        <li><a href="totems.html">Tótems</a></li>
+        <li><a href="guardarropia.html">Guardarropía</a></li>
+        <li><a href="clientes.html">Clientes</a></li>
+      </ul>
+      <div class="nav-mobile-actions">
+        <a class="nav-cta" href="https://clientes.vendeme.app">Acceso clientes</a>
+        <a class="nav-cta-primary" href="https://app.vendeme.app/">Compra tus entradas</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-media">
+      <video autoplay muted loop playsinline poster="assets/img/hero-poster.webp" preload="metadata">
+        <source src="video-evento-nuevo.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="wrap hero-grid">
+      <div class="hero-content">
+        <h1>Tu evento, <span class="accent">de la entrada al último trago.</span></h1>
+        <p class="hero-sub">Vende, opera, cobra y entiende todo lo que está pasando en tu evento, desde la preventa hasta el cierre de la barra.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="https://wa.me/56975404201?text=Hola%20Vendeme%2C%20quiero%20saber%20m%C3%A1s%20de%20sus%20servicios">Hablemos de tu evento</a>
+          <a class="btn-ghost" href="nosotros.html">11 años operando en terreno</a>
+        </div>
+      </div>
+      <div class="hero-receipt">
+        <div>
+          <div class="receipt-slot"></div>
+          <div class="receipt-tape">
+            <div class="receipt-head">
+              <img class="store-logo" src="assets/img/logo-black.png" alt="vende.me">
+              <span class="meta">Santiago, Chile · 11 años en terreno</span>
+            </div>
+            <div class="receipt-rule"></div>
+            <a class="receipt-row" href="ticketing.html"><span class="name">Ticketing</span><span class="fill"></span><span class="tag">Entradas</span></a>
+            <a class="receipt-row" href="check.html"><span class="name">Check</span><span class="fill"></span><span class="tag">Puerta</span></a>
+            <a class="receipt-row" href="totems.html"><span class="name">Tótems</span><span class="fill"></span><span class="tag">Autoatención</span></a>
+            <a class="receipt-row" href="pos.html"><span class="name">POS</span><span class="fill"></span><span class="tag">Barra</span></a>
+            <a class="receipt-row" href="guardarropia.html"><span class="name">Guardarropía</span><span class="fill"></span><span class="tag">Prendas</span></a>
+            <a class="receipt-row" href="clientes.html"><span class="name">Clientes</span><span class="fill"></span><span class="tag">En vivo</span></a>
+            <div class="receipt-rule"></div>
+            <div class="receipt-total"><span>Total</span><span class="accent">Tu evento, completo</span></div>
+            <div class="receipt-barcode" aria-hidden="true"></div>
+            <div class="receipt-id">TICKET #VNDM · GRACIAS POR OPERAR CON NOSOTROS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERRAMIENTAS: cinco capítulos, uno por herramienta, revelados con scroll -->
+  <section class="block" id="herramientas" style="min-height:auto; padding:88px 0 0;">
+    <div class="wrap">
+      <div class="tools-intro">
+        <h2>Entra por una necesidad, <span class="accent">crece dentro del ecosistema.</span></h2>
+        <p>Cada herramienta funciona sola. Todas funcionan mejor juntas. Sigue bajando para ver cada una en acción.</p>
+      </div>
+    </div>
+
+    <nav class="chapter-rail" aria-label="Navegación Vendeme">
+      <a href="#chapter-ticketing" data-chapter="ticketing"><span class="chapter-rail-dot"></span><span class="chapter-rail-label">Ticketing</span></a>
+      <a href="#chapter-check" data-chapter="check"><span class="chapter-rail-dot"></span><span class="chapter-rail-label">Check</span></a>
+      <a href="#chapter-totems" data-chapter="totems"><span class="chapter-rail-dot"></span><span class="chapter-rail-label">Tótems</span></a>
+      <a href="#chapter-pos" data-chapter="pos"><span class="chapter-rail-dot"></span><span class="chapter-rail-label">POS</span></a>
+      <a href="#chapter-guardarropia" data-chapter="guardarropia"><span class="chapter-rail-dot"></span><span class="chapter-rail-label">Guardarropía</span></a>
+      <span class="chapter-rail-divider" aria-hidden="true"></span>
+      <a href="nosotros.html"><span class="chapter-rail-dot"></span><span class="chapter-rail-label">Nosotros</span></a>
+      <a href="contacto.html"><span class="chapter-rail-dot"></span><span class="chapter-rail-label">Contacto</span></a>
+    </nav>
+
+    <div class="chapters">
+
+      <!-- 01 · Ticketing -->
+      <section class="tool-chapter" id="chapter-ticketing" data-chapter="ticketing">
+        <div class="wrap">
+          <div class="tool-grid">
+            <div class="tool-copy">
+              <div class="chapter-index">01 / 05</div>
+              <div class="pin-kicker kicker-app"><img class="kicker-icon" src="assets/img/app-icon-app.png" alt="" width="26" height="26" loading="lazy">Vendeme Ticketing</div>
+              <h3 class="tool-title">Tu evento empieza antes de que abra la puerta.</h3>
+              <ol class="tool-beats">
+                <li><button class="tool-beat active" type="button">
+                  <span class="beat-title">Todos tus eventos, en un solo lugar.</span>
+                  <span class="beat-text">La cartelera reúne tus eventos activos, listos para comprar en segundos.</span>
+                  <i class="beat-bar" aria-hidden="true"></i>
+                </button></li>
+                <li><button class="tool-beat" type="button">
+                  <span class="beat-title">Vende tus entradas. Conecta el resto.</span>
+                  <span class="beat-text">Preventa, cupos y beneficios, listos antes de que abra la puerta.</span>
+                  <i class="beat-bar" aria-hidden="true"></i>
+                </button></li>
+              </ol>
+              <div class="tool-actions">
+                <a class="link" href="ticketing.html">Conoce Vendeme Ticketing</a>
+                <div class="dl">
+                  <button class="btn-dl" type="button" aria-haspopup="true" aria-expanded="false">
+                    <img class="btn-dl-icon" src="assets/img/app-icon-app.png" alt="" width="20" height="20" loading="lazy">
+                    Descarga la Vendeme App
+                    <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="dl-menu" role="menu">
+                    <a role="menuitem" href="https://apps.apple.com/cl/app/vendeme/id995637028" target="_blank" rel="noopener">App Store <small>iPhone</small></a>
+                    <a role="menuitem" href="https://play.google.com/store/apps/details?id=cl.bazo.vendemeapp&amp;hl=es_419" target="_blank" rel="noopener">Google Play <small>Android</small></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tool-stage is-phone">
+              <div class="ticket-phone device-frame" style="--tilt:-6deg;">
+                <div class="notch"></div>
+                <div class="device-screen">
+                  <div class="screen-panel active" data-stage="0"><img src="assets/img/ticketing-cartelera-celular.webp" alt="Cartelera de eventos en la app Vendeme"></div>
+                  <div class="screen-panel" data-stage="1"><img src="assets/img/ticketing-entrada-celular.webp" alt="Entrada con código QR en la app Vendeme"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 · Check -->
+      <section class="tool-chapter" id="chapter-check" data-chapter="check">
+        <div class="wrap">
+          <div class="tool-grid reverse">
+            <div class="tool-copy">
+              <div class="chapter-index">02 / 05</div>
+              <div class="pin-kicker kicker-app"><img class="kicker-icon" src="assets/img/app-icon-check.png" alt="" width="26" height="26" loading="lazy">Vendeme Check</div>
+              <span class="spec">Entradas · Consumos · Aforo · Reportes · Guardarropía</span>
+              <h3 class="tool-title">Accesos, consumos y aforo, bajo control.</h3>
+              <ol class="tool-beats">
+                <li><button class="tool-beat active" type="button">
+                  <span class="beat-title">Escanea cualquier ticket.</span>
+                  <span class="beat-text">Entrada, consumo o guardarropía: el equipo apunta la cámara, en la puerta o en la barra.</span>
+                  <i class="beat-bar" aria-hidden="true"></i>
+                </button></li>
+                <li><button class="tool-beat" type="button">
+                  <span class="beat-title">Válido, al instante.</span>
+                  <span class="beat-text">Verde, y el asistente pasa. Sin ambigüedad, sin fila.</span>
+                  <i class="beat-bar" aria-hidden="true"></i>
+                </button></li>
+                <li><button class="tool-beat" type="button">
+                  <span class="beat-title">Cuenta y reporta, todo en una app.</span>
+                  <span class="beat-text">Aforo manual sincronizado en vivo, y reportes de terreno con foto y contexto.</span>
+                  <i class="beat-bar" aria-hidden="true"></i>
+                </button></li>
+              </ol>
+              <div class="tool-actions">
+                <a class="link" href="check.html">Conoce Vendeme Check</a>
+                <div class="dl">
+                  <button class="btn-dl" type="button" aria-haspopup="true" aria-expanded="false">
+                    <img class="btn-dl-icon" src="assets/img/app-icon-check.png" alt="" width="20" height="20" loading="lazy">
+                    Descarga Vendeme Check
+                    <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="dl-menu" role="menu">
+                    <a role="menuitem" href="https://apps.apple.com/cl/app/vendeme-check/id1490351162" target="_blank" rel="noopener">App Store <small>iPhone</small></a>
+                    <a role="menuitem" href="https://play.google.com/store/apps/details?id=cl.bazo.vendemecheck&amp;hl=es_CL" target="_blank" rel="noopener">Google Play <small>Android</small></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tool-stage is-phone check-visual">
+              <div class="check-visual-mode active" data-mode="phone">
+                <div class="device-frame" style="--tilt:-6deg;">
+                  <div class="notch"></div>
+                  <div class="device-screen">
+                    <div class="screen-panel active" data-stage="0">
+                      <h4>Escaneando</h4>
+                      <div class="scan-viewfinder">
+                        <span class="corner tl"></span><span class="corner tr"></span>
+                        <span class="corner bl"></span><span class="corner br"></span>
+                        <span class="scan-line"></span>
+                      </div>
+                      <div class="device-row"><span>Cámara activa</span><span class="up">●</span></div>
+                    </div>
+                    <div class="screen-panel" data-stage="1">
+                      <div class="check-result valid">
+                        <span class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        <h4>Entrada válida</h4>
+                        <span class="sub">Ticket #VD-38291 · General</span>
+                      </div>
+                    </div>
+                    <div class="screen-panel" data-stage="2">
+                      <h4>Aforo manual</h4>
+                      <div class="tally-counter">
+                        <span class="tally-btn" aria-hidden="true">−</span>
+                        <div class="tally-value"><strong class="count-up">842</strong><span>ingresados</span></div>
+                        <span class="tally-btn" aria-hidden="true">+</span>
+                      </div>
+                      <div class="device-row"><span>Sincronizado con</span><strong>Vendeme Clientes</strong></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="check-visual-mode" data-mode="quemador">
+                <div class="device3d fixed-width" style="width:240px; height:auto;">
+                  <div class="ambient" style="background-image:url('assets/img/check-r017-amb.webp')" aria-hidden="true"></div>
+                  <img src="assets/img/check-r017.webp" width="600" height="742" alt="Quemador Vendeme Check, lector dedicado R-017" data-fallback>
+                  <div class="photo-fallback">
+                    <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20 100V40a10 10 0 0 1 10-10h60a10 10 0 0 1 10 10v60" stroke="#a79c8e" stroke-width="2.5"/>
+                      <rect x="42" y="26" width="36" height="52" rx="4" stroke="#ff5723" stroke-width="2.5"/>
+                      <path d="M50 52l8 8 14-16" stroke="#ff5723" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                      <line x1="20" y1="100" x2="100" y2="100" stroke="#a79c8e" stroke-width="2.5"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="check-visual-toggle">
+                <button class="cv-btn active" data-mode="phone" type="button">Teléfono</button>
+                <button class="cv-btn" data-mode="quemador" type="button">Quemador</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 · Tótems -->
+      <section class="tool-chapter" id="chapter-totems" data-chapter="totems">
+        <div class="wrap">
+          <div class="tool-grid">
+            <div class="tool-copy">
+              <div class="chapter-index">03 / 05</div>
+              <div class="pin-kicker">Tótems Vendeme</div>
+              <h3 class="tool-title">Autoatención donde tiene sentido.</h3>
+              <ol class="tool-beats">
+                <li><button class="tool-beat active" type="button">
+                  <span class="beat-title">El cliente agrega el producto.</span>
+                  <span class="beat-text">Sin fila ni espera: pide directo desde la pantalla del tótem.</span>
+                  <i class="beat-bar" aria-hidden="true"></i>
+                </button></li>
+                <li><button class="tool-beat" type="button">
+                  <span class="beat-title">Ticket impreso, con QR.</span>
+                  <span class="beat-text">Listo para retirar en barra, al instante.</span>
+                  <i class="beat-bar" aria-hidden="true"></i>
+                </button></li>
+              </ol>
+              <a class="link" href="totems.html">Conoce los Tótems</a>
+            </div>
+            <div class="tool-stage is-photo">
+              <div class="device3d tall" id="home-totems-device">
+                <div class="ambient" style="background-image:url('assets/img/totem-tall-amb.webp')" aria-hidden="true"></div>
+                <img src="assets/img/totem-tall.webp" width="600" height="1122" alt="Tótem de autoatención Vendeme" data-fallback>
+                <div class="photo-fallback"><img data-src="assets/img/totem-app-mockup.png" alt="Tótem Vendeme con el catálogo en pantalla" style="max-width:70%; height:auto; filter:drop-shadow(0 25px 35px rgba(0,0,0,0.5));"></div>
+                <div class="totem-screen-frame">
+                  <div class="device-screen">
+                    <div class="screen-panel active" data-stage="0">
+                      <h4>Todo · Promo · Botellas</h4>
+                      <div class="device-row"><span>Austral Patagonia 330cc</span><strong>$2.000</strong></div>
+                      <div class="device-row"><span>Redbull 250cc</span><strong>$8.000</strong></div>
+                      <div class="device-row"><span>Alto del Carmen 35°</span><strong>$5.000</strong></div>
+                    </div>
+                    <div class="screen-panel center" data-stage="1">
+                      <h4>Ticket #5107</h4>
+                      <div class="qr-grid">
+<div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c "></div><div class="c on"></div>
+<div class="c on"></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c on"></div><div class="c "></div><div class="c on"></div>
+<div class="c on"></div><div class="c "></div><div class="c on"></div><div class="c "></div><div class="c on"></div><div class="c "></div><div class="c on"></div>
+<div class="c on"></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c on"></div><div class="c "></div><div class="c "></div>
+<div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c "></div><div class="c on"></div>
+<div class="c "></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c on"></div>
+<div class="c on"></div><div class="c "></div><div class="c on"></div><div class="c on"></div><div class="c "></div><div class="c on"></div><div class="c "></div>
+                        <div class="qr-logo"><img src="assets/img/ticket-mark-black.png" alt=""></div>
+                      </div>
+                      <p style="color:var(--muted); font-size:12px; margin-top:10px;">Retirar en barra</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 · POS -->
+      <section class="tool-chapter" id="chapter-pos" data-chapter="pos">
+        <div class="wrap">
+          <div class="tool-grid reverse">
+            <div class="tool-copy">
+              <div class="chapter-index">04 / 05</div>
+              <div class="pin-kicker">Vendeme POS</div>
+              <h3 class="tool-title">Del pedido al pago.</h3>
+              <ol class="tool-beats">
+                <li><button class="tool-beat active" type="button">
+                  <span class="beat-title">Agrega el producto.</span>
+                  <span class="beat-text">El equipo selecciona el producto y lo suma al pedido, en la pantalla del mismo equipo.</span>
+                  <i class="beat-bar" aria-hidden="true"></i>
+                </button></li>
+                <li><button class="tool-beat" type="button">
+                  <span class="beat-title">Ticket impreso, con QR.</span>
+                  <span class="beat-text">La venta queda registrada al instante en Vendeme Clientes.</span>
+                  <i class="beat-bar" aria-hidden="true"></i>
+                </button></li>
+              </ol>
+              <a class="link" href="pos.html">Conoce el POS</a>
+            </div>
+            <div class="tool-stage is-photo">
+              <div class="device3d" id="home-pos-device">
+                <div class="ambient" style="background-image:url('assets/img/pos-cutout-amb.webp')" aria-hidden="true"></div>
+                <img src="assets/img/pos-cutout.webp" width="600" height="1298" alt="Terminal POS Vendeme" data-fallback>
+                <div class="photo-fallback"><img data-src="assets/img/pos-app-screenshot.png" alt="Vendeme POS corriendo en un Sunmi P3" style="max-width:80%; height:auto; filter:drop-shadow(0 25px 35px rgba(0,0,0,0.5));"></div>
+                <div class="pos-screen-frame">
+                  <div class="device-screen">
+                    <div class="screen-panel active" data-stage="0">
+                      <h4>Todos los productos</h4>
+                      <div class="device-row"><span>Alto del Carmen 35°</span><strong>$5.000</strong></div>
+                      <div class="device-row"><span>Austral Lager 330cc</span><strong>$2.000</strong></div>
+                      <div class="device-row"><span>Cacique Añejo</span><strong>$5.000</strong></div>
+                    </div>
+                    <div class="screen-panel center" data-stage="1">
+                      <h4>Ticket #4821</h4>
+                      <div class="qr-grid">
+<div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c "></div><div class="c on"></div>
+<div class="c on"></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c on"></div><div class="c "></div><div class="c on"></div>
+<div class="c on"></div><div class="c "></div><div class="c on"></div><div class="c "></div><div class="c on"></div><div class="c "></div><div class="c on"></div>
+<div class="c on"></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c on"></div><div class="c "></div><div class="c "></div>
+<div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c "></div><div class="c on"></div>
+<div class="c "></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c on"></div>
+<div class="c on"></div><div class="c "></div><div class="c on"></div><div class="c on"></div><div class="c "></div><div class="c on"></div><div class="c "></div>
+                        <div class="qr-logo"><img src="assets/img/ticket-mark-black.png" alt=""></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 · Guardarropía -->
+      <section class="tool-chapter" id="chapter-guardarropia" data-chapter="guardarropia">
+        <div class="wrap">
+          <div class="tool-grid">
+            <div class="tool-copy">
+              <div class="chapter-index">05 / 05</div>
+              <div class="pin-kicker">Guardarropía</div>
+              <span class="spec">Ticket asociado a RUT o carnet</span>
+              <h3 class="tool-title">Cada prenda, a tu nombre.</h3>
+              <p class="tool-lead">Seguridad para el asistente, orden para el equipo.</p>
+              <a class="link" href="guardarropia.html">Conoce Guardarropía</a>
+            </div>
+            <div class="tool-stage is-ticket">
+              <div class="vc-ticket-stage">
+                <div class="claim-ticket scanning">
+                  <div class="claim-ticket-top">
+                    <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="60" cy="22" r="7" stroke="#ff5723" stroke-width="2.5"/>
+                      <path d="M60 29v8M40 82l20-45 20 45" stroke="#a79c8e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M32 60h56" stroke="#a79c8e" stroke-width="2"/>
+                    </svg>
+                  </div>
+                  <div class="claim-ticket-rule"></div>
+                  <div class="claim-ticket-row"><span>Ticket</span><strong>#0842</strong></div>
+                  <div class="claim-ticket-row"><span>Asociado a</span><strong>RUT 18.4XX.XXX-X</strong></div>
+                  <div class="claim-ticket-row"><span>Prenda</span><strong>Abrigo negro</strong></div>
+                  <div class="claim-ticket-row"><span>Estado</span><strong class="up">A tu nombre ✓</strong></div>
+                  <div class="claim-scan"></div>
+                  <div class="claim-stamp">ENTREGADO</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </section>
+
+  <!-- CLIENTES PANEL -->
+  <section class="block panel" id="clientes">
+    <div class="wrap">
+      <div class="kicker kicker-app" style="justify-content:center;"><img class="kicker-icon" src="assets/img/app-icon-clientes.png" alt="" width="26" height="26" loading="lazy">Vendeme Clientes</div>
+      <h2>Y todo eso lo ves mientras está pasando.</h2>
+      <p style="color:var(--muted); max-width:44ch; margin:16px auto 0; font-size:16px;">
+        Ventas, accesos y consumos del evento: antes, durante y después, en la web y en la app.
+      </p>
+      <div class="card-row" role="region" aria-label="Antes, durante y después del evento" tabindex="0">
+        <div class="vc">
+          <div class="vc-label"><span>Antes · Ventas</span><span class="vc-live">Preventa activa</span></div>
+          <svg class="vc-chart" viewBox="0 0 300 120" aria-hidden="true">
+            <defs><linearGradient id="vcArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff5723" stop-opacity=".28"/><stop offset="1" stop-color="#ff5723" stop-opacity="0"/></linearGradient></defs>
+            <path class="vc-area" d="M0 104 C30 100 50 96 80 88 C110 80 130 84 160 66 C190 48 220 44 250 26 L282 16 L282 120 L0 120Z" fill="url(#vcArea)"/>
+            <path class="vc-line" pathLength="1" d="M0 104 C30 100 50 96 80 88 C110 80 130 84 160 66 C190 48 220 44 250 26 L282 16"/>
+            <circle class="vc-now" cx="282" cy="16" r="5"/>
+          </svg>
+          <div class="vc-axis"><span>Hace 14 días</span><span>Hoy</span></div>
+          <div class="vc-stats">
+            <div class="vc-stat"><b>Vendidas</b><strong>1.284</strong></div>
+            <div class="vc-stat"><b>Preventa</b><strong class="up">+18%</strong></div>
+            <div class="vc-stat"><b>Cupos</b><strong>320</strong></div>
+          </div>
+        </div>
+        <div class="vc">
+          <div class="vc-label"><span>Durante · Operación</span><span class="vc-live">En vivo</span></div>
+          <div class="vc-live-row">
+            <div class="vc-ring"><div><strong data-tally>842</strong><span>ingresados</span></div></div>
+            <div class="vc-live-side"><strong>67% de aforo</strong>Accesos registrados por Check, en tiempo real.</div>
+          </div>
+          <div class="vc-hbar"><span>Barra 2</span><div class="vc-bar grow"><i style="--w:100%"></i></div><strong>$900.000</strong></div>
+          <div class="vc-hbar"><span>Barra 1</span><div class="vc-bar grow"><i style="--w:78%"></i></div><strong>$700.000</strong></div>
+          <div class="vc-hbar"><span>Tótem 1</span><div class="vc-bar grow"><i style="--w:56%"></i></div><strong>$500.000</strong></div>
+        </div>
+        <div class="vc">
+          <div class="vc-label"><span>Después · Comparar eventos</span></div>
+          <div class="vc-cmp">
+            <div class="vc-cmp-top"><span>Ventas totales</span><strong>$8,4M</strong><em>▲ 12%</em></div>
+            <div class="vc-bar grow"><i style="--w:88%"></i></div>
+            <div class="vc-bar prev grow"><i style="--w:78%"></i></div>
+          </div>
+          <div class="vc-cmp">
+            <div class="vc-cmp-top"><span>Ticket promedio</span><strong>$9.900</strong><em>▲ 4%</em></div>
+            <div class="vc-bar grow"><i style="--w:72%"></i></div>
+            <div class="vc-bar prev grow"><i style="--w:69%"></i></div>
+          </div>
+          <div class="vc-cmp">
+            <div class="vc-cmp-top"><span>Ocupación final</span><strong>94%</strong><em>▲ 6 pts</em></div>
+            <div class="vc-bar grow"><i style="--w:94%"></i></div>
+            <div class="vc-bar prev grow"><i style="--w:88%"></i></div>
+          </div>
+          <div class="vc-legend"><span><i></i>Este evento</span><span><i class="prev"></i>Anterior</span></div>
+        </div>
+      </div>
+      <div class="tool-actions center">
+        <a class="link" href="clientes.html">Conoce Vendeme Clientes</a>
+        <div class="dl">
+          <button class="btn-dl" type="button" aria-haspopup="true" aria-expanded="false">
+            <img class="btn-dl-icon" src="assets/img/app-icon-clientes.png" alt="" width="20" height="20" loading="lazy">
+            Descarga Vendeme Clientes
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="dl-menu" role="menu">
+            <a role="menuitem" href="https://apps.apple.com/cl/app/vendeme-clientes/id6499478332" target="_blank" rel="noopener">App Store <small>iPhone</small></a>
+            <a role="menuitem" href="https://play.google.com/store/apps/details?id=cl.bazo.vendemeclient&amp;hl=es_CL" target="_blank" rel="noopener">Google Play <small>Android</small></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="block nosotros" id="nosotros">
+    <div class="wrap row">
+      <div class="copy">
+        <div class="kicker">Nosotros</div>
+        <h2>Experiencia aplicada.</h2>
+        <p>Más de 11 años construyendo tecnología desde los eventos, no solo para ellos. Cada función del sistema existe porque una noche hizo falta.</p>
+        <a class="link" style="display:inline-block; margin-top:20px;" href="nosotros.html">Más sobre nosotros</a>
+      </div>
+      <div class="vc" aria-hidden="true">
+        <div class="vc-label"><span>Una noche hizo falta</span></div>
+        <div class="vc-story"><span class="was">Una entrada que debía validarse rápido</span><b class="became">Vendeme Check</b></div>
+        <div class="vc-story"><span class="was">Una barra en hora punta</span><b class="became">POS y Tótems</b></div>
+        <div class="vc-story"><span class="was">Un consumo que debía controlarse</span><b class="became">Ticket con QR</b></div>
+        <div class="vc-story"><span class="was">Un cierre que tenía que cuadrar esa misma noche</span><b class="became">Vendeme Clientes</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUERTAS DE ENTRADA -->
+  <section class="block" id="puertas">
+    <div class="wrap">
+      <div class="tools-intro">
+        <div class="kicker">Puertas de entrada</div>
+        <h2>¿Por dónde te conviene partir?</h2>
+        <p>No necesitas cambiar toda tu operación para empezar. Elige tu punto de partida y suma el resto cuando quieras.</p>
+      </div>
+      <div class="vc-steps" role="region" aria-label="Puertas de entrada" tabindex="0">
+        <div class="vc vc-doorcard">
+          <span class="vc-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4z"/><path d="M14 6v12" stroke-dasharray="2 2"/></svg></span>
+          <span class="eyebrow">Vendo entradas</span>
+          <h3>Ticketing</h3>
+          <p>Preventa, tramos y cupos, con Check para validar en la puerta.</p>
+          <div class="add"><small>Suma después</small><div class="vc-route"><span class="to">POS</span><span class="to">Tótems</span></div></div>
+          <a class="link" href="ticketing.html">Conoce Ticketing</a>
+        </div>
+        <div class="vc vc-doorcard">
+          <span class="vc-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><rect x="8.5" y="6" width="7" height="5" rx="1"/><path d="M9 15h2M13 15h2M9 18h2M13 18h2"/></svg></span>
+          <span class="eyebrow">Vendo en la barra</span>
+          <h3>POS</h3>
+          <p>Toma pedidos, cobra e imprime el ticket desde el mismo equipo.</p>
+          <div class="add"><small>Suma después</small><div class="vc-route"><span class="to">Tótems</span><span class="to">Ticketing</span></div></div>
+          <a class="link" href="pos.html">Conoce el POS</a>
+        </div>
+        <div class="vc vc-doorcard">
+          <span class="vc-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2"/><rect x="9" y="5" width="6" height="9" rx="1"/><path d="M10 18h4"/></svg></span>
+          <span class="eyebrow">Quiero menos filas</span>
+          <h3>Tótems</h3>
+          <p>Autoatención: el asistente pide y paga solo, y la barra se dedica a entregar.</p>
+          <div class="add"><small>Suma después</small><div class="vc-route"><span class="to">POS</span><span class="to">Ticketing</span></div></div>
+          <a class="link" href="totems.html">Conoce los Tótems</a>
+        </div>
+        <div class="vc vc-doorcard">
+          <span class="vc-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><circle cx="5" cy="6" r="1.8"/><circle cx="19" cy="6" r="1.8"/><circle cx="5" cy="18" r="1.8"/><circle cx="19" cy="18" r="1.8"/><path d="M6.5 7l4 3.5M17.5 7l-4 3.5M6.5 17l4-3.5M17.5 17l-4-3.5"/></svg></span>
+          <span class="eyebrow">Quiero operarlo todo</span>
+          <h3>Todo el ecosistema</h3>
+          <p>Venta, acceso, barra, pagos e información del evento, conectados.</p>
+          <div class="add"><small>Incluye</small><div class="vc-route"><span class="to">Ticketing</span><span class="to">Check</span><span class="to">POS</span><span class="to">Tótems</span><span class="to">Clientes</span></div></div>
+          <a class="link" href="#contacto">Cuéntanos tu operación</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="block" id="contacto" style="border-bottom:1px solid var(--line);">
+    <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-copy">
+        <div class="kicker">Contacto</div>
+        <h2>¿Hablamos de tu evento?</h2>
+        <p>Cuéntanos qué tipo de evento haces y por dónde te sirve partir. No necesitas tener todo definido: puedes entrar por Ticketing, POS o Tótems, y crecer dentro del ecosistema.</p>
+        <div class="hero-actions" style="margin-top:28px;">
+          <a class="btn-primary" href="https://wa.me/56975404201?text=Hola%20Vendeme%2C%20quiero%20saber%20m%C3%A1s%20de%20sus%20servicios">Escríbenos por WhatsApp</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-row"><span>WhatsApp y teléfono</span><a href="tel:+56975404201">+56 9 7540 4201</a></div>
+        <div class="contact-row"><span>Correo</span><a href="mailto:contacto@vendeme.app">contacto@vendeme.app</a></div>
+        <div class="contact-row"><span>Ubicación</span><span>Santiago, Chile</span></div>
+        <div class="contact-person">
+          <div class="avatar">PS</div>
+          <div>
+            <div class="name">Pablo Sajnovich</div>
+            <div class="role">Contacto directo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="availability">
+        <div class="availability-intro">
+          <div class="kicker">Disponibilidad</div>
+          <h3>¿Para cuándo necesitas tu evento?</h3>
+          <p>Elige la fecha que te interesa. Nos escribes con el nombre del local o productora y cómo contactarte, y te confirmamos disponibilidad.</p>
+        </div>
+        <div class="availability-calendar">
+          <div class="cal-header">
+            <button class="cal-nav" type="button" data-dir="-1" aria-label="Mes anterior">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <span class="cal-month" id="cal-month-label">—</span>
+            <button class="cal-nav" type="button" data-dir="1" aria-label="Mes siguiente">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="cal-weekdays">
+            <span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span>
+          </div>
+          <div class="cal-grid" id="cal-grid" role="grid" aria-label="Calendario de disponibilidad"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="avail-modal" id="avail-modal" role="dialog" aria-modal="true" aria-labelledby="avail-modal-title">
+    <div class="avail-modal-card">
+      <button class="avail-modal-close" type="button" id="avail-modal-close" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="avail-date-badge"><span class="m" id="avail-badge-month">SEP</span><span class="d" id="avail-badge-day">17</span></div>
+      <div class="kicker">Consulta de fecha</div>
+      <h3 id="avail-modal-title">17 de septiembre de 2026</h3>
+      <p>Cuéntanos para qué evento es y te confirmamos si esa fecha está disponible.</p>
+      <form id="avail-form" novalidate>
+        <label class="avail-field">
+          <span>Nombre del local o productora</span>
+          <input type="text" id="avail-venue" placeholder="Ej: Club Pulso, Vendeme Prod..." aria-describedby="avail-venue-error">
+          <span class="field-error" id="avail-venue-error" role="alert">Cuéntanos el nombre del local o productora.</span>
+        </label>
+        <label class="avail-field">
+          <span>Correo o celular de contacto</span>
+          <input type="text" id="avail-contact" placeholder="tu@correo.com o +56 9…" aria-describedby="avail-contact-error">
+          <span class="field-error" id="avail-contact-error" role="alert">Deja un correo o celular para responderte.</span>
+        </label>
+        <button class="btn-primary" type="submit" id="avail-submit">Consultar disponibilidad</button>
+        <p class="avail-note">Se abrirá WhatsApp con tu consulta lista para enviar.</p>
+        <p class="avail-note avail-fallback" id="avail-fallback" hidden>Tu navegador bloqueó la ventana de WhatsApp. <a href="#" id="avail-fallback-link">Ábrela aquí</a>.</p>
+      </form>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="footer-logo" href="#top" aria-label="Vendeme — inicio"><img src="assets/img/logo.png" alt="Vendeme"></a>
+        <p class="footer-tag">Entradas, puerta, guardarropía, tótems y barra.</p>
+      </div>
+      <div class="footer-col footer-apps">
+        <h4>Apps</h4>
+        <div class="app-row">
+          <img class="app-icon" src="assets/img/app-icon-app.png" alt="" width="40" height="40" loading="lazy">
+          <div class="app-row-body">
+            <span class="app-name">Vendeme App</span>
+            <span class="app-plat"><a href="https://apps.apple.com/cl/app/vendeme/id995637028">iOS</a><span class="sep">·</span><a href="https://play.google.com/store/apps/details?id=cl.bazo.vendemeapp&amp;hl=es_419">Android</a></span>
+          </div>
+        </div>
+        <div class="app-row">
+          <img class="app-icon" src="assets/img/app-icon-clientes.png" alt="" width="40" height="40" loading="lazy">
+          <div class="app-row-body">
+            <span class="app-name">Vendeme Clientes</span>
+            <span class="app-plat"><a href="https://apps.apple.com/cl/app/vendeme-clientes/id6499478332">iOS</a><span class="sep">·</span><a href="https://play.google.com/store/apps/details?id=cl.bazo.vendemeclient&amp;hl=es_CL">Android</a></span>
+          </div>
+        </div>
+        <div class="app-row">
+          <img class="app-icon" src="assets/img/app-icon-check.png" alt="" width="40" height="40" loading="lazy">
+          <div class="app-row-body">
+            <span class="app-name">Vendeme Check</span>
+            <span class="app-plat"><a href="https://apps.apple.com/cl/app/vendeme-check/id1490351162">iOS</a><span class="sep">·</span><a href="https://play.google.com/store/apps/details?id=cl.bazo.vendemecheck&amp;hl=es_CL">Android</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">English</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Bazo SpA · © 2026 · Todos los derechos reservados.</span>
+      <span>Hecho en Chile</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

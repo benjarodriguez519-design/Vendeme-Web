@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<title>Vendeme Check — Controla lo que pasa en terreno</title>
+<meta name="description" content="Vendeme Check valida entradas y consumos, cuenta asistentes y registra situaciones operativas, desde el teléfono o desde un quemador físico dedicado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html" aria-label="Vendeme — inicio"><img src="assets/img/logo.png" alt="Vendeme"></a>
+    <ul class="nav-links">
+      <li><a href="ticketing.html">Ticketing</a></li>
+      <li><a href="check.html">Check</a></li>
+      <li><a href="pos.html">POS</a></li>
+      <li><a href="totems.html">Tótems</a></li>
+      <li><a href="guardarropia.html">Guardarropía</a></li>
+      <li><a href="clientes.html">Clientes</a></li>
+    </ul>
+    <div class="nav-buttons">
+      <a class="nav-cta" href="https://clientes.vendeme.app">Acceso clientes</a>
+      <a class="nav-cta-primary" href="https://app.vendeme.app/">Compra tus entradas</a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg class="i-open" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile">
+    <div class="wrap">
+      <ul>
+        <li><a href="ticketing.html">Ticketing</a></li>
+        <li><a href="check.html">Check</a></li>
+        <li><a href="pos.html">POS</a></li>
+        <li><a href="totems.html">Tótems</a></li>
+        <li><a href="guardarropia.html">Guardarropía</a></li>
+        <li><a href="clientes.html">Clientes</a></li>
+      </ul>
+      <div class="nav-mobile-actions">
+        <a class="nav-cta" href="https://clientes.vendeme.app">Acceso clientes</a>
+        <a class="nav-cta-primary" href="https://app.vendeme.app/">Compra tus entradas</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap breadcrumb"><a href="index.html">← Volver al inicio</a></div>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="kicker">Puerta, barra y terreno</div>
+      <h1>Accesos, consumos y aforo, bajo control.</h1>
+      <p class="hero-sub">Vendeme Check valida entradas y consumos, cuenta asistentes a mano o al vuelo, y registra lo que ocurre en terreno — desde el teléfono de tu equipo o desde un quemador físico dedicado. Una app, todas las funciones de control del evento.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://wa.me/56975404201?text=Hola%20Vendeme%2C%20quiero%20saber%20m%C3%A1s%20de%20sus%20servicios">Hablemos de Check</a>
+        <a class="btn-ghost" href="#check-pin">Ver cómo funciona</a>
+        <div class="dl chip">
+          <button class="btn-dl" type="button" aria-haspopup="true" aria-expanded="false">
+            <img class="btn-dl-icon" src="assets/img/app-icon-check.png" alt="" width="20" height="20" loading="lazy">
+            Descarga Check
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="dl-menu" role="menu">
+            <a role="menuitem" href="https://apps.apple.com/cl/app/vendeme-check/id1490351162" target="_blank" rel="noopener">App Store <small>iPhone</small></a>
+            <a role="menuitem" href="https://play.google.com/store/apps/details?id=cl.bazo.vendemecheck&amp;hl=es_CL" target="_blank" rel="noopener">Google Play <small>Android</small></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="pin-wrap" id="check-pin" style="height:250vh;">
+    <div class="pin-inner">
+      <div class="pin-left">
+        <div class="pin-kicker">Vendeme Check</div>
+        <span class="spec">Entradas · Consumos · Aforo · Reportes · Guardarropía</span>
+        <div class="pin-text-col">
+
+          <div class="pin-stage active">
+            <h2>Escanea cualquier ticket.</h2>
+            <p>Entrada, consumo o guardarropía: el equipo apunta la cámara y Check reconoce cuál es.</p>
+          </div>
+          <div class="pin-stage">
+            <h2>Válido, al instante.</h2>
+            <p>Verde, y el asistente pasa. Sin ambigüedad, sin fila.</p>
+          </div>
+          <div class="pin-stage">
+            <h2>O detecta el problema.</h2>
+            <p>Ticket duplicado, entrada ya usada: Check lo marca antes de que entre.</p>
+          </div>
+
+        </div>
+        <div class="pin-progress">
+          <div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+        <div class="check-visual-toggle">
+          <button class="cv-btn active" data-mode="phone">Teléfono</button>
+          <button class="cv-btn" data-mode="quemador">Quemador</button>
+        </div>
+      </div>
+
+      <div class="pin-visual-col">
+        <div class="check-visual-mode active" data-mode="phone">
+          <div class="device-frame" id="check-device" style="--tilt:-8deg;">
+            <div class="notch"></div>
+            <div class="device-screen">
+              <div class="screen-panel active" data-stage="0">
+                <p class="mock-title">Escaneando</p>
+                <div class="scan-viewfinder">
+                  <span class="corner tl"></span><span class="corner tr"></span>
+                  <span class="corner bl"></span><span class="corner br"></span>
+                  <span class="scan-line"></span>
+                </div>
+                <div class="device-row"><span>Cámara activa</span><span class="up">●</span></div>
+              </div>
+              <div class="screen-panel" data-stage="1">
+                <div class="check-result valid">
+                  <span class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  <p class="mock-title">Entrada válida</p>
+                  <span class="sub">Ticket #VD-38291 · General</span>
+                </div>
+              </div>
+              <div class="screen-panel" data-stage="2">
+                <div class="check-result invalid">
+                  <span class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  <p class="mock-title">Ya fue usada</p>
+                  <span class="sub">Ticket #VD-30144 · 23:41</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="check-visual-mode" data-mode="quemador">
+          <div class="device3d fixed-width" style="width:240px; height:auto;">
+            <img src="assets/img/check-r017.png" alt="Quemador Vendeme Check, lector dedicado R-017" loading="lazy" data-fallback>
+            <div class="photo-fallback">
+              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 100V40a10 10 0 0 1 10-10h60a10 10 0 0 1 10 10v60" stroke="#a79c8e" stroke-width="2.5"/>
+                <rect x="42" y="26" width="36" height="52" rx="4" stroke="#ff5723" stroke-width="2.5"/>
+                <path d="M50 52l8 8 14-16" stroke="#ff5723" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="20" y1="100" x2="100" y2="100" stroke="#a79c8e" stroke-width="2.5"/>
+              </svg>
+            </div>
+          </div>
+          <div class="quemador-readout">
+            <div class="screen-panel active" data-stage="0"><span class="up">●</span> Escaneando</div>
+            <div class="screen-panel" data-stage="1"><span class="status-dot valid"></span> Entrada válida</div>
+            <div class="screen-panel" data-stage="2"><span class="status-dot invalid"></span> Ya fue usada</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="content-block has-visual" id="detalle">
+    <div class="wrap">
+      <div class="split-block">
+        <div class="split-copy">
+          <div class="kicker">Acceso</div>
+          <h2>Acceso validado, con contexto completo</h2>
+          <p>En la puerta, el equipo escanea cada entrada y confirma su validez instantáneamente. Cada validación actualiza el registro de acceso y evita usos duplicados.</p>
+          <p>Al validar, el equipo también puede acceder a la información asociada a esa entrada: compra, tipo de ticket, beneficios y datos de identificación cuando corresponda.</p>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <div class="vc">
+            <div class="vc-label"><span>Resultado del escaneo</span></div>
+            <div class="vc-result valid">
+              <span class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>Entrada válida</strong><span class="sub">Ticket #VD-38291 · General</span></div>
+            </div>
+            <div class="vc-result valid">
+              <span class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>Consumo válido</strong><span class="sub">Mistral Apple (Promo) · Barra 2</span></div>
+            </div>
+            <div class="vc-result invalid">
+              <span class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>Ya fue usada</strong><span class="sub">Ticket #VD-30144 · 23:41</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-block alt has-visual">
+    <div class="wrap">
+      <div class="split-block reverse">
+        <div class="split-copy">
+          <div class="kicker">Aforo</div>
+          <h2>El contador manual, pero digital</h2>
+          <p>Cada validación en la puerta suma sola al aforo. Pero no todo punto de control tiene un ticket que escanear: un acceso general, una zona con cupo limitado.</p>
+          <p>Para esos casos, Check reemplaza el clicker físico de siempre por un contador manual en la misma app: tu equipo suma y resta con un tap, y el aforo queda visible en vivo en <a href="clientes.html" class="inline-link">Vendeme Clientes</a>, igual que el resto de la operación.</p>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <div class="vc">
+            <div class="vc-label"><span>Aforo manual</span><span class="vc-live">En vivo</span></div>
+            <div class="vc-tally">
+              <span class="vc-tally-btn">−</span>
+              <div class="vc-tally-num"><strong data-tally>842</strong><span>ingresados</span></div>
+              <span class="vc-tally-btn plus">+</span>
+            </div>
+            <div class="vc-bar"><i></i></div>
+            <div class="vc-meta"><span>Aforo <strong>67%</strong></span><span>Sincronizado con <strong>Vendeme Clientes</strong></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="big-statement">
+    <div class="wrap">
+      <p>Escanea, confirma, registra: <span class="accent">así se controla</span> lo que pasa en terreno.</p>
+    </div>
+  </section>
+
+  <section class="content-block has-visual">
+    <div class="wrap">
+      <div class="split-block">
+        <div class="split-copy">
+          <div class="kicker">Reportes</div>
+          <h2>Reporta lo que ocurre</h2>
+          <p>Check también puede utilizarse para registrar situaciones operativas en terreno.</p>
+          <p>El equipo puede generar reportes con fotografías, información asociada y el contexto de lo ocurrido.</p>
+          <div class="tag-list"><span class="tag">Incidentes o conflictos</span><span class="tag">Personas con restricción de acceso</span><span class="tag">Objetos perdidos</span><span class="tag">Situaciones de seguridad</span><span class="tag">Registros internos</span></div>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <div class="vc">
+            <div class="vc-label"><span>Nuevo reporte</span></div>
+            <div class="vc-photo">
+              <span class="vc-photo-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Foto adjunta</span>
+            </div>
+            <div class="report-type-row">
+              <span class="tag-chip active">Incidente</span><span class="tag-chip">Objeto perdido</span><span class="tag-chip">Acceso</span>
+            </div>
+            <div class="device-row"><span>Ubicación</span><strong>Puerta principal</strong></div>
+            <div class="device-row"><span>Hora</span><strong>23:47</strong></div>
+            <div class="vc-sent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Enviado a Vendeme Clientes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-block alt has-visual">
+    <div class="wrap">
+      <div class="split-block reverse">
+        <div class="split-copy">
+          <div class="kicker">Consumos y guardarropía</div>
+          <h2>Acompaña consumos y <a href="guardarropia.html" class="inline-link">guardarropía</a></h2>
+          <p>Un consumo comprado en el <a href="totems.html" class="inline-link">tótem</a>, en el <a href="pos.html" class="inline-link">POS</a> o desde la app Vendeme genera siempre el mismo tipo de ticket. Check lo valida igual en cualquiera de los tres casos, y confirma el canje en barra.</p>
+          <p>Con <a href="guardarropia.html" class="inline-link">guardarropía</a>, el mismo principio: Check registra qué prenda entra y con quién, y confirma la entrega al salir — el mismo historial que después sirve para validar cualquier consumo pendiente en el <a href="pos.html" class="inline-link">POS</a>.</p>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <div class="vc">
+            <div class="vc-label"><span>Un ticket, un registro</span></div>
+            <div class="vc-flow">
+              <div class="vc-step"><small>Guardarropía</small><strong>Prenda #0842 registrada</strong><span>A nombre de RUT 18.4XX.XXX-X</span></div>
+              <div class="vc-step"><small>Check</small><strong>Ticket validado</strong><span>Entrada, consumo o prenda: el mismo escaneo</span></div>
+              <div class="vc-step"><small>POS</small><strong>Consumo pendiente verificado</strong><span>Con el historial de guardarropía</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-block has-visual">
+    <div class="wrap">
+      <div class="split-block">
+        <div class="split-copy">
+          <div class="kicker">Quemador físico</div>
+          <h2>También existe en un aparato dedicado</h2>
+          <p>Además del teléfono, Check se conecta a un quemador físico: un lector dedicado para validar cualquier tipo de ticket asociado al evento —ya sean entradas, consumos o guardarropía—, pensado para uso intensivo en terreno.</p>
+          <p>Se puede ubicar donde más se necesite — en la puerta, en una barra, donde haya más flujo — y valida cualquier ticket con el mismo criterio que la app.</p>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <div class="vc-quemador">
+            <div class="ambient" style="background-image:url('assets/img/check-r017.png')"></div>
+            <img src="assets/img/check-r017.png" alt="" loading="lazy">
+            <div class="vc-toast"><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span>Ticket válido <em>+1</em></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-block alt center">
+    <div class="wrap">
+      <div class="kicker kicker-app" style="justify-content:center;"><img class="kicker-icon" src="assets/img/app-icon-clientes.png" alt="" width="26" height="26" loading="lazy">Vendeme Clientes</div>
+      <h2>Todo lo que pasa en Check, en un solo lugar</h2>
+      <p>Cada validación, cada suma al aforo, cada reporte y cada entrega de guardarropía quedan registrados en <a href="clientes.html" class="inline-link">Vendeme Clientes</a>: la app donde ves todo lo que va ocurriendo en tu evento, mientras ocurre.</p>
+      <div class="vc vc-wide" aria-hidden="true">
+        <div class="vc-label"><span>Vendeme Clientes · Evento</span><span class="vc-live">En vivo</span></div>
+        <div class="vc-feed">
+          <div class="vc-feed-list">
+            <div class="vc-feed-row"><time>23:41</time><i class="dot"></i><span><strong>Entrada válida</strong> · Puerta 1</span></div>
+            <div class="vc-feed-row"><time>23:42</time><i class="dot"></i><span><strong>Aforo +1</strong> · Acceso general</span></div>
+            <div class="vc-feed-row"><time>23:44</time><i class="dot"></i><span><strong>Consumo canjeado</strong> · Barra 2</span></div>
+            <div class="vc-feed-row"><time>23:47</time><i class="dot"></i><span><strong>Reporte enviado</strong> · Puerta principal</span></div>
+            <div class="vc-feed-row"><time>23:51</time><i class="dot"></i><span><strong>Prenda entregada</strong> · Guardarropía</span></div>
+            <div class="vc-feed-row"><time>23:52</time><i class="dot warn"></i><span><strong>Ticket ya usado</strong> · Puerta 2</span></div>
+            <div class="vc-feed-row"><time>23:41</time><i class="dot"></i><span><strong>Entrada válida</strong> · Puerta 1</span></div>
+            <div class="vc-feed-row"><time>23:42</time><i class="dot"></i><span><strong>Aforo +1</strong> · Acceso general</span></div>
+            <div class="vc-feed-row"><time>23:44</time><i class="dot"></i><span><strong>Consumo canjeado</strong> · Barra 2</span></div>
+            <div class="vc-feed-row"><time>23:47</time><i class="dot"></i><span><strong>Reporte enviado</strong> · Puerta principal</span></div>
+            <div class="vc-feed-row"><time>23:51</time><i class="dot"></i><span><strong>Prenda entregada</strong> · Guardarropía</span></div>
+            <div class="vc-feed-row"><time>23:52</time><i class="dot warn"></i><span><strong>Ticket ya usado</strong> · Puerta 2</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="wrap">
+      <h2>Una herramienta para validar, contar, registrar y actuar.</h2>
+      <p>Veamos cómo funciona Check en tu evento.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://wa.me/56975404201?text=Hola%20Vendeme%2C%20quiero%20saber%20m%C3%A1s%20de%20sus%20servicios">Veamos cómo funciona en tu evento</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="footer-logo" href="index.html" aria-label="Vendeme — inicio"><img src="assets/img/logo.png" alt="Vendeme"></a>
+        <p class="footer-tag">Entradas, puerta, guardarropía, tótems y barra.</p>
+      </div>
+      <div class="footer-col footer-apps">
+        <p class="col-title">Apps</p>
+        <div class="app-row">
+          <img class="app-icon" src="assets/img/app-icon-app.png" alt="" width="40" height="40" loading="lazy">
+          <div class="app-row-body">
+            <span class="app-name">Vendeme App</span>
+            <span class="app-plat"><a href="https://apps.apple.com/cl/app/vendeme/id995637028">iOS</a><span class="sep">·</span><a href="https://play.google.com/store/apps/details?id=cl.bazo.vendemeapp&amp;hl=es_419">Android</a></span>
+          </div>
+        </div>
+        <div class="app-row">
+          <img class="app-icon" src="assets/img/app-icon-clientes.png" alt="" width="40" height="40" loading="lazy">
+          <div class="app-row-body">
+            <span class="app-name">Vendeme Clientes</span>
+            <span class="app-plat"><a href="https://apps.apple.com/cl/app/vendeme-clientes/id6499478332">iOS</a><span class="sep">·</span><a href="https://play.google.com/store/apps/details?id=cl.bazo.vendemeclient&amp;hl=es_CL">Android</a></span>
+          </div>
+        </div>
+        <div class="app-row">
+          <img class="app-icon" src="assets/img/app-icon-check.png" alt="" width="40" height="40" loading="lazy">
+          <div class="app-row-body">
+            <span class="app-name">Vendeme Check</span>
+            <span class="app-plat"><a href="https://apps.apple.com/cl/app/vendeme-check/id1490351162">iOS</a><span class="sep">·</span><a href="https://play.google.com/store/apps/details?id=cl.bazo.vendemecheck&amp;hl=es_CL">Android</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="col-title">Empresa</p>
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="col-title">Legal</p>
+        <ul>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">English</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Bazo SpA · © 2026 · Todos los derechos reservados.</span>
+      <span>Hecho en Chile</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

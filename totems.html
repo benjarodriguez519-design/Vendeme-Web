@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<title>Tótems Vendeme — Más puntos de venta, menos fricción</title>
+<meta name="description" content="Tótems de autoatención Vendeme: el asistente pide y paga solo, con Vendeme Pay integrado, mientras la barra se dedica a preparar y entregar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html" aria-label="Vendeme — inicio"><img src="assets/img/logo.png" alt="Vendeme"></a>
+    <ul class="nav-links">
+      <li><a href="ticketing.html">Ticketing</a></li>
+      <li><a href="check.html">Check</a></li>
+      <li><a href="pos.html">POS</a></li>
+      <li><a href="totems.html">Tótems</a></li>
+      <li><a href="guardarropia.html">Guardarropía</a></li>
+      <li><a href="clientes.html">Clientes</a></li>
+    </ul>
+    <div class="nav-buttons">
+      <a class="nav-cta" href="https://clientes.vendeme.app">Acceso clientes</a>
+      <a class="nav-cta-primary" href="https://app.vendeme.app/">Compra tus entradas</a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg class="i-open" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile">
+    <div class="wrap">
+      <ul>
+        <li><a href="ticketing.html">Ticketing</a></li>
+        <li><a href="check.html">Check</a></li>
+        <li><a href="pos.html">POS</a></li>
+        <li><a href="totems.html">Tótems</a></li>
+        <li><a href="guardarropia.html">Guardarropía</a></li>
+        <li><a href="clientes.html">Clientes</a></li>
+      </ul>
+      <div class="nav-mobile-actions">
+        <a class="nav-cta" href="https://clientes.vendeme.app">Acceso clientes</a>
+        <a class="nav-cta-primary" href="https://app.vendeme.app/">Compra tus entradas</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap breadcrumb"><a href="index.html">← Volver al inicio</a></div>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="kicker">Tótems</div>
+      <h1>Más puntos de venta. Menos fricción.</h1>
+      <p class="hero-sub">Los Tótems Vendeme de autoatención están optimizados para la eficiencia. Su meta es eliminar las filas: los asistentes piden y pagan por sí mismos, mientras la barra se concentra en preparar y entregar.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://wa.me/56975404201?text=Hola%20Vendeme%2C%20quiero%20saber%20m%C3%A1s%20de%20sus%20servicios">Hablemos de Tótems</a>
+        <a class="btn-ghost" href="#totems-pin">Ver cómo funciona</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="pin-wrap" id="totems-pin" style="height:200vh;">
+    <div class="pin-inner">
+      <div class="pin-left">
+        <div class="pin-kicker">Tótems Vendeme</div>
+        <div class="pin-text-col">
+
+          <div class="pin-stage active">
+            <h2>Pide y paga, sin fila.</h2>
+            <p>El cliente arma su pedido y paga en el mismo tótem, con Vendeme Pay integrado.</p>
+          </div>
+
+          <div class="pin-stage">
+            <h2>Ticket impreso, con QR.</h2>
+            <p>Listo para retirar en barra, y ya visible en <a href="clientes.html" class="inline-link">Vendeme Clientes</a>.</p>
+          </div>
+
+        </div>
+        <div class="pin-progress">
+          <div class="dot active"></div><div class="dot"></div>
+        </div>
+      </div>
+
+      <div class="pin-visual-col">
+        <div class="device3d tall" id="totems-device">
+          <img src="assets/img/totem-tall.png" alt="Tótem de autoatención Vendeme" loading="lazy" data-fallback>
+          <div class="photo-fallback"><img src="assets/img/totem-app-mockup.png" alt="Tótem Vendeme con el catálogo en pantalla" style="max-width:70%; height:auto; filter:drop-shadow(0 25px 35px rgba(0,0,0,0.5));"></div>
+
+          <div class="totem-screen-frame">
+            <div class="device-screen">
+              <div class="screen-panel active" data-stage="0">
+                <p class="mock-title">Pago aceptado ✓</p>
+                <div class="device-row"><span>Método</span><strong>Tarjeta</strong></div>
+                <div class="device-row"><span>Total</span><strong class="up">$10.000</strong></div>
+              </div>
+              <div class="screen-panel center" data-stage="1">
+                <p class="mock-title">Ticket #5107</p>
+                <div class="qr-grid">
+<div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c "></div><div class="c on"></div>
+<div class="c on"></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c on"></div><div class="c "></div><div class="c on"></div>
+<div class="c on"></div><div class="c "></div><div class="c on"></div><div class="c "></div><div class="c on"></div><div class="c "></div><div class="c on"></div>
+<div class="c on"></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c on"></div><div class="c "></div><div class="c "></div>
+<div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c "></div><div class="c on"></div>
+<div class="c "></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c on"></div>
+<div class="c on"></div><div class="c "></div><div class="c on"></div><div class="c on"></div><div class="c "></div><div class="c on"></div><div class="c "></div>
+                  <div class="qr-logo"><img src="assets/img/ticket-mark-black.png" alt=""></div>
+                </div>
+                <p style="color:var(--muted); font-size:12px; margin-top:10px;">Retirar en barra</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- El ticket real, saliendo del tótem: pausa cinematográfica a sangre completa -->
+  <section class="ticket-banner">
+    <img src="assets/img/totem-ticket-detail.webp" width="1536" height="2751" alt="Ticket impreso saliendo de un tótem Vendeme" loading="lazy">
+    <div class="ticket-banner-caption">
+      <p>Cada pedido sale impreso al instante, con el mismo ticket que ya conoces del resto del ecosistema.</p>
+    </div>
+  </section>
+
+  <section class="content-block has-visual" id="detalle">
+    <div class="wrap">
+      <div class="split-block">
+        <div class="split-copy">
+          <div class="kicker">Autoatención</div>
+          <h2>Autoatención donde tiene sentido</h2>
+          <p>Los tótems no reemplazan necesariamente al POS. Lo complementan.</p>
+          <p>POS para la venta asistida y atención directa, tótems para autoatención, filas rápidas y puntos de alta demanda.</p>
+          <p>Ambos pueden convivir en un mismo evento.</p>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <div class="vc">
+            <div class="vc-label"><span>Personas en espera</span></div>
+            <div class="vc-lane">
+              <div class="vc-lane-title">Solo POS</div>
+              <div class="vc-lane-body">
+                <div class="vc-qrow">
+                  <div class="vc-queue"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i></div>
+                  <span class="vc-point"></span>
+                </div>
+                <div class="vc-lane-stat">Fila larga en un solo punto</div>
+              </div>
+            </div>
+            <div class="vc-lane">
+              <div class="vc-lane-title">POS + Tótems</div>
+              <div class="vc-lane-body">
+                <div class="vc-qrow"><div class="vc-queue"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i></div><span class="vc-point"></span></div>
+                <div class="vc-qrow"><div class="vc-queue"><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i></div><span class="vc-point"></span></div>
+                <div class="vc-qrow"><div class="vc-queue"><i style="--i:2"></i><i style="--i:3"></i></div><span class="vc-point"></span></div>
+                <div class="vc-lane-stat">La misma gente, repartida en tres puntos</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="big-statement">
+    <div class="wrap">
+      <p>Menos fila. <span class="accent">Más venta.</span></p>
+    </div>
+  </section>
+
+  <section class="content-block alt has-visual">
+    <div class="wrap">
+      <div class="split-block reverse">
+        <div class="split-copy">
+          <div class="kicker">Operación</div>
+          <h2>Misma operación</h2>
+          <p>Tótems y POS trabajan con el mismo catálogo y stock.</p>
+          <p>Esto permite distribuir la venta sin perder visibilidad sobre lo que está ocurriendo en cada punto.</p>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <div class="vc">
+            <div class="vc-label"><span>Mismo catálogo, mismo stock</span></div>
+            <div class="vc-sync">
+              <div class="vc-stockcard"><small>Tótem 1</small><b>Austral Lager 330cc</b><div class="vc-stock"></div><span>en stock</span></div>
+              <div class="vc-stockcard"><small>POS · Barra 1</small><b>Austral Lager 330cc</b><div class="vc-stock"></div><span>en stock</span></div>
+            </div>
+            <div class="vc-syncbar"><span class="vc-live">Sincronizado en vivo</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-block has-visual">
+    <div class="wrap">
+      <div class="split-block">
+        <div class="split-copy">
+          <div class="kicker">Pagos</div>
+          <h2>El pago también es parte del tótem</h2>
+          <p>Las compras de los tótems usan Vendeme Pay, la misma pasarela que acompaña el resto del ecosistema Vendeme.</p>
+          <p>Cada transacción queda registrada al instante en <a href="clientes.html" class="inline-link">Vendeme Clientes</a>.</p>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <div class="vc">
+            <div class="vc-label"><span>Pago en el tótem</span><span class="vc-live">Vendeme Pay</span></div>
+            <div class="vc-stage">
+              <div class="vc-state"><span class="vc-cardico"></span><strong>Acerca tu tarjeta</strong><span>Total $10.000</span></div>
+              <div class="vc-state"><span class="vc-okico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><strong>Pago aceptado</strong><span>Registrado al instante</span></div>
+              <div class="vc-state"><span class="vc-ticketico"></span><strong>Ticket #5107</strong><span>Retira en barra</span></div>
+            </div>
+            <div class="vc-syncbar"><span class="vc-live">Visible en Vendeme Clientes</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="wrap">
+      <h2>Más formas de vender. Una misma operación.</h2>
+      <p>Veamos cuántos puntos necesitas para tu próximo evento.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://wa.me/56975404201?text=Hola%20Vendeme%2C%20quiero%20saber%20m%C3%A1s%20de%20sus%20servicios">Veamos cuántos puntos necesitas</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="footer-logo" href="index.html" aria-label="Vendeme — inicio"><img src="assets/img/logo.png" alt="Vendeme"></a>
+        <p class="footer-tag">Entradas, puerta, guardarropía, tótems y barra.</p>
+      </div>
+      <div class="footer-col footer-apps">
+        <p class="col-title">Apps</p>
+        <div class="app-row">
+          <img class="app-icon" src="assets/img/app-icon-app.png" alt="" width="40" height="40" loading="lazy">
+          <div class="app-row-body">
+            <span class="app-name">Vendeme App</span>
+            <span class="app-plat"><a href="https://apps.apple.com/cl/app/vendeme/id995637028">iOS</a><span class="sep">·</span><a href="https://play.google.com/store/apps/details?id=cl.bazo.vendemeapp&amp;hl=es_419">Android</a></span>
+          </div>
+        </div>
+        <div class="app-row">
+          <img class="app-icon" src="assets/img/app-icon-clientes.png" alt="" width="40" height="40" loading="lazy">
+          <div class="app-row-body">
+            <span class="app-name">Vendeme Clientes</span>
+            <span class="app-plat"><a href="https://apps.apple.com/cl/app/vendeme-clientes/id6499478332">iOS</a><span class="sep">·</span><a href="https://play.google.com/store/apps/details?id=cl.bazo.vendemeclient&amp;hl=es_CL">Android</a></span>
+          </div>
+        </div>
+        <div class="app-row">
+          <img class="app-icon" src="assets/img/app-icon-check.png" alt="" width="40" height="40" loading="lazy">
+          <div class="app-row-body">
+            <span class="app-name">Vendeme Check</span>
+            <span class="app-plat"><a href="https://apps.apple.com/cl/app/vendeme-check/id1490351162">iOS</a><span class="sep">·</span><a href="https://play.google.com/store/apps/details?id=cl.bazo.vendemecheck&amp;hl=es_CL">Android</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="col-title">Empresa</p>
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="col-title">Legal</p>
+        <ul>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">English</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Bazo SpA · © 2026 · Todos los derechos reservados.</span>
+      <span>Hecho en Chile</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+
+
+</body>
+</html>

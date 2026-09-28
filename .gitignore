@@ -1,0 +1,27 @@
+# Herramientas locales de Claude / Impeccable — no son parte del sitio
+.claude/
+.impeccable/
+
+# Backup antiguo del home, no es la página en vivo
+index-anterior.html
+
+# Archivos zip (respaldos manuales, no se versionan)
+*.zip
+
+# Videos sin usar (el sitio usa video-evento-nuevo.mp4)
+video-evento.mp4
+PixVerse_V6_Image_Text_540P_Animate_this_exact.mp4
+
+# Documentos de negocio (no son código del sitio)
+*.docx
+
+# Imágenes fuente sueltas en la raíz, ya procesadas dentro de assets/img/
+/*.png
+/*.jpg
+/*.jpeg
+
+# Imágenes dentro de assets/img sin usar (versiones antiguas o de referencia)
+assets/img/totem-ticket-detail.png
+assets/img/check-r004-legacy.png
+assets/img/totem-render-3up.png
+assets/img/printer-detail.png

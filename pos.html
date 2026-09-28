@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<title>Vendeme POS — Vende y cobra donde ocurre el evento</title>
+<meta name="description" content="Vendeme POS: toma pedidos, cobra e imprime el ticket desde el mismo equipo, en barra, mesas o cualquier punto de venta del evento.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html" aria-label="Vendeme — inicio"><img src="assets/img/logo.png" alt="Vendeme"></a>
+    <ul class="nav-links">
+      <li><a href="ticketing.html">Ticketing</a></li>
+      <li><a href="check.html">Check</a></li>
+      <li><a href="pos.html">POS</a></li>
+      <li><a href="totems.html">Tótems</a></li>
+      <li><a href="guardarropia.html">Guardarropía</a></li>
+      <li><a href="clientes.html">Clientes</a></li>
+    </ul>
+    <div class="nav-buttons">
+      <a class="nav-cta" href="https://clientes.vendeme.app">Acceso clientes</a>
+      <a class="nav-cta-primary" href="https://app.vendeme.app/">Compra tus entradas</a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg class="i-open" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile">
+    <div class="wrap">
+      <ul>
+        <li><a href="ticketing.html">Ticketing</a></li>
+        <li><a href="check.html">Check</a></li>
+        <li><a href="pos.html">POS</a></li>
+        <li><a href="totems.html">Tótems</a></li>
+        <li><a href="guardarropia.html">Guardarropía</a></li>
+        <li><a href="clientes.html">Clientes</a></li>
+      </ul>
+      <div class="nav-mobile-actions">
+        <a class="nav-cta" href="https://clientes.vendeme.app">Acceso clientes</a>
+        <a class="nav-cta-primary" href="https://app.vendeme.app/">Compra tus entradas</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap breadcrumb"><a href="index.html">← Volver al inicio</a></div>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="kicker">POS</div>
+      <h1>Vende donde ocurre el evento.</h1>
+      <p class="hero-sub">Vendeme POS permite tomar pedidos, cobrar y registrar ventas en barra, mesas o puntos de atención.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://wa.me/56975404201?text=Hola%20Vendeme%2C%20quiero%20saber%20m%C3%A1s%20de%20sus%20servicios">Hablemos de POS</a>
+        <a class="btn-ghost" href="#pos-pin">Ver cómo funciona</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="pin-wrap" id="pos-pin" style="height:200vh;">
+    <div class="pin-inner">
+      <div class="pin-left">
+        <div class="pin-kicker">Vendeme POS</div>
+        <div class="pin-text-col">
+
+          <div class="pin-stage active">
+            <h2>Agrega y cobra, en el mismo terminal.</h2>
+            <p>Tu equipo suma el pedido y cobra sin cambiar de pantalla; Vendeme Pay confirma al instante.</p>
+          </div>
+
+          <div class="pin-stage">
+            <h2>Ticket impreso, con QR.</h2>
+            <p>La venta queda registrada en <a href="clientes.html" class="inline-link">Vendeme Clientes</a> al mismo tiempo que se imprime el ticket.</p>
+          </div>
+
+        </div>
+        <div class="pin-progress">
+          <div class="dot active"></div><div class="dot"></div>
+        </div>
+      </div>
+
+      <div class="pin-visual-col">
+        <div class="device3d" id="pos-device">
+          <img src="assets/img/pos-cutout.png" alt="Terminal POS Vendeme" loading="lazy" data-fallback>
+          <div class="photo-fallback"><img src="assets/img/pos-app-screenshot.png" alt="Vendeme POS corriendo en un Sunmi P3" style="max-width:80%; height:auto; filter:drop-shadow(0 25px 35px rgba(0,0,0,0.5));"></div>
+
+          <div class="pos-screen-frame">
+            <div class="device-screen">
+              <div class="screen-panel active" data-stage="0">
+                <p class="mock-title">Pago aceptado ✓</p>
+                <div class="device-row"><span>Método</span><strong>Tarjeta</strong></div>
+                <div class="device-row"><span>Total</span><strong class="up">$7.000</strong></div>
+              </div>
+              <div class="screen-panel center" data-stage="1">
+                <p class="mock-title">Ticket #4821</p>
+                <div class="qr-grid">
+<div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c "></div><div class="c on"></div>
+<div class="c on"></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c on"></div><div class="c "></div><div class="c on"></div>
+<div class="c on"></div><div class="c "></div><div class="c on"></div><div class="c "></div><div class="c on"></div><div class="c "></div><div class="c on"></div>
+<div class="c on"></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c on"></div><div class="c "></div><div class="c "></div>
+<div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c "></div><div class="c on"></div>
+<div class="c "></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c "></div><div class="c on"></div>
+<div class="c on"></div><div class="c "></div><div class="c on"></div><div class="c on"></div><div class="c "></div><div class="c on"></div><div class="c "></div>
+                  <div class="qr-logo"><img src="assets/img/ticket-mark-black.png" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pausa cinematográfica: el equipo en terreno -->
+  <section class="ticket-banner ticket-banner-pos">
+    <img src="assets/img/pos-cinematic.png" alt="Terminal POS Vendeme en un evento" loading="lazy">
+    <div class="ticket-banner-caption">
+      <p>El mismo equipo, en cualquier barra, en cualquier evento.</p>
+    </div>
+  </section>
+
+  <section class="content-block alt has-visual">
+    <div class="wrap">
+      <div class="split-block reverse">
+        <div class="split-copy">
+          <div class="kicker">Dónde operar</div>
+          <h2>En barra, mesas o donde lo necesites</h2>
+          <p>La operación no ocurre igual en todos los eventos.</p>
+          <p>Vendeme POS puede adaptarse a barras, zonas de comida, mesas con comanda, puntos de venta interiores o exteriores.</p>
+          <p>Cada punto trabaja con una operación ordenada y conectada al resto del evento.</p>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <div class="vc">
+            <div class="vc-label"><span>Un equipo, muchos puntos</span><span class="vc-live">En línea</span></div>
+            <div class="vc-floor">
+              <div class="vc-zone" style="left:5%; top:7%; width:38%; height:22%;">Barra 1</div>
+              <div class="vc-zone" style="left:57%; top:7%; width:38%; height:22%;">Barra 2</div>
+              <div class="vc-zone tables" style="left:5%; top:44%; width:40%; height:42%;">Mesas</div>
+              <div class="vc-zone dashed" style="left:57%; top:44%; width:38%; height:42%;">Terraza</div>
+              <span class="vc-pos" style="left:16%; top:18%; --i:0"></span>
+              <span class="vc-pos" style="left:33%; top:18%; --i:1"></span>
+              <span class="vc-pos" style="left:76%; top:18%; --i:2"></span>
+              <span class="vc-pos" style="left:26%; top:62%; --i:3"></span>
+              <span class="vc-pos" style="left:76%; top:66%; --i:4"></span>
+            </div>
+            <div class="vc-floor-legend"><span><i></i>POS activo</span><span>Mismo catálogo en todos</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="big-statement">
+    <div class="wrap">
+      <p>Menos pasos para quien atiende. <span class="accent">Más claridad</span> para quien opera.</p>
+    </div>
+  </section>
+
+  <section class="content-block has-visual">
+    <div class="wrap">
+      <div class="split-block">
+        <div class="split-copy">
+          <div class="kicker">Catálogo</div>
+          <h2>El mismo catálogo, el mismo stock</h2>
+          <p>POS permite trabajar con un catálogo común entre puntos de venta y, cuando corresponde, con control de inventario.</p>
+          <p>Así, lo que se vende en una barra también queda reflejado en la operación general del evento.</p>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <div class="vc">
+            <div class="vc-label"><span>Mismo catálogo, mismo stock</span></div>
+            <div class="vc-sync">
+              <div class="vc-stockcard"><small>POS · Barra 1</small><b>Austral Lager 330cc</b><div class="vc-stock"></div><span>en stock</span></div>
+              <div class="vc-stockcard"><small>POS · Barra 2</small><b>Austral Lager 330cc</b><div class="vc-stock"></div><span>en stock</span></div>
+            </div>
+            <div class="vc-syncbar"><span class="vc-live">Sincronizado en vivo</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-block alt has-visual">
+    <div class="wrap">
+      <div class="split-block reverse">
+        <div class="split-copy">
+          <div class="kicker">Pagos</div>
+          <h2>Cobrar también es operar</h2>
+          <p>Vendeme Pay acompaña la venta desde el mismo terminal y el ticket sale impreso al instante, con QR incluido.</p>
+          <p>El pago queda asociado a la operación, facilitando el control de ventas, transacciones y cierres.</p>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <div class="vc">
+            <div class="vc-label"><span>Cierre · Barra 1</span></div>
+            <div class="device-row"><span>Ventas registradas</span><strong>412</strong></div>
+            <div class="device-row"><span>Total cobrado</span><strong>$2.860.000</strong></div>
+            <div class="device-row"><span>Diferencia</span><strong class="up">$0</strong></div>
+            <div class="vc-badge-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cierre cuadrado</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="wrap">
+      <h2>Hablemos de tu operación</h2>
+      <p>Te mostramos el POS funcionando y vemos cómo se adapta a tu barra o punto de venta.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://wa.me/56975404201?text=Hola%20Vendeme%2C%20quiero%20saber%20m%C3%A1s%20de%20sus%20servicios">Hablemos de tu operación</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="footer-logo" href="index.html" aria-label="Vendeme — inicio"><img src="assets/img/logo.png" alt="Vendeme"></a>
+        <p class="footer-tag">Entradas, puerta, guardarropía, tótems y barra.</p>
+      </div>
+      <div class="footer-col footer-apps">
+        <p class="col-title">Apps</p>
+        <div class="app-row">
+          <img class="app-icon" src="assets/img/app-icon-app.png" alt="" width="40" height="40" loading="lazy">
+          <div class="app-row-body">
+            <span class="app-name">Vendeme App</span>
+            <span class="app-plat"><a href="https://apps.apple.com/cl/app/vendeme/id995637028">iOS</a><span class="sep">·</span><a href="https://play.google.com/store/apps/details?id=cl.bazo.vendemeapp&amp;hl=es_419">Android</a></span>
+          </div>
+        </div>
+        <div class="app-row">
+          <img class="app-icon" src="assets/img/app-icon-clientes.png" alt="" width="40" height="40" loading="lazy">
+          <div class="app-row-body">
+            <span class="app-name">Vendeme Clientes</span>
+            <span class="app-plat"><a href="https://apps.apple.com/cl/app/vendeme-clientes/id6499478332">iOS</a><span class="sep">·</span><a href="https://play.google.com/store/apps/details?id=cl.bazo.vendemeclient&amp;hl=es_CL">Android</a></span>
+          </div>
+        </div>
+        <div class="app-row">
+          <img class="app-icon" src="assets/img/app-icon-check.png" alt="" width="40" height="40" loading="lazy">
+          <div class="app-row-body">
+            <span class="app-name">Vendeme Check</span>
+            <span class="app-plat"><a href="https://apps.apple.com/cl/app/vendeme-check/id1490351162">iOS</a><span class="sep">·</span><a href="https://play.google.com/store/apps/details?id=cl.bazo.vendemecheck&amp;hl=es_CL">Android</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="col-title">Empresa</p>
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="col-title">Legal</p>
+        <ul>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">English</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Bazo SpA · © 2026 · Todos los derechos reservados.</span>
+      <span>Hecho en Chile</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+
+
+</body>
+</html>
