@@ -1,20 +1,16 @@
 // Vendeme — comportamiento compartido entre páginas
 (function(){
-  // A plain link click into a page the browser already has in this tab's session history
-  // (e.g. "Conoce el POS" -> pos.html, visited earlier in the session) can get its old scroll
-  // position restored instead of opening at the top. Force top-of-page, but only on a genuine
-  // fresh navigation — never on reload or an actual back/forward, where restoring scroll is right.
-  (function(){
-    var navEntries = window.performance && performance.getEntriesByType && performance.getEntriesByType('navigation');
-    var navType = (navEntries && navEntries[0]) ? navEntries[0].type
-      : (window.performance && performance.navigation ? ['navigate','reload','back_forward'][performance.navigation.type] : 'navigate');
-    if(navType !== 'navigate') return;
-    if('scrollRestoration' in history){ history.scrollRestoration = 'manual'; }
-    var toTop = function(){ if(window.scrollY > 0 || document.documentElement.scrollTop > 0) window.scrollTo(0, 0); };
-    toTop();
-    window.addEventListener('load', toTop);
-    setTimeout(toTop, 0);
-  })();
+  // Belt-and-suspenders reinforcement of the inline <head> fix (scrollRestoration='manual'
+  // set as early as possible in every page's <head>): force top-of-page a few more times in
+  // case something later — a late image/font layout shift, a browser that restores scroll
+  // after this point — still leaves it scrolled. Unconditional: this is a brochure site, every
+  // page should always open at the top, full stop.
+  var forceTop = function(){ window.scrollTo(0, 0); };
+  forceTop();
+  document.addEventListener('DOMContentLoaded', forceTop);
+  window.addEventListener('load', forceTop);
+  setTimeout(forceTop, 0);
+  setTimeout(forceTop, 300);
 
   // Current-page nav state: every page ships the same 6 tool links with no way to tell
   // which one you're on (Impeccable /clarify, P3) — mark it via aria-current, no per-page markup.
