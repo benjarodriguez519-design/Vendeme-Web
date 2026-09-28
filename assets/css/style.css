@@ -76,6 +76,7 @@ header{
 }
 .nav-links a{padding:6px 0;}
 .nav-links a:hover{color:var(--amber);}
+.nav-links a[aria-current="page"], .nav-mobile a[aria-current="page"]{color:var(--text); font-weight:700;}
 .nav-cta{
   font-size:14px; font-weight:600; color:var(--text);
   border:1px solid var(--line); padding:8px 16px; border-radius:10px;
@@ -590,6 +591,11 @@ footer{padding:56px 0 32px;}
 .content-block:nth-of-type(6n+0) .wrap{ max-width:820px; }
 .content-block:nth-of-type(3n+2) h2{ font-size:clamp(30px,4.6vw,44px); }
 .content-block:nth-of-type(3n+2) p{ font-size:18px; max-width:52ch; }
+/* :nth-of-type counts every <section>, not just .content-block ones — on pos.html a .big-statement
+   sibling shifts the count so this block lands on the boosted index by accident, sizing it up next
+   to two structurally identical blocks that stay at the base size. Reset it back explicitly. */
+#pos-catalogo h2{ font-size:clamp(26px,3.4vw,36px); }
+#pos-catalogo p{ font-size:16px; max-width:62ch; }
 .content-block h2{ font-size:clamp(26px,3.4vw,36px); max-width:18ch; margin-bottom:16px; }
 .content-block p{ color:var(--muted); font-size:16px; margin:0 0 14px; max-width:62ch; }
 .content-block p:last-child{margin-bottom:0;}
@@ -1093,8 +1099,10 @@ section.content-block .vc-stepcard p{ margin:0; max-width:none; font-size:14px; 
 .vc-point{ flex:none; width:24px; height:24px; border-radius:7px; border:2px solid var(--amber); }
 .vc-lane-stat{ margin-top:2px; font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--amber); }
 /* Impeccable /colorize, P2: the same amber was marking the problem lane and the solution
-   lane — the signal color should only mark the one thing worth noticing (the improved result) */
-.vc-lane:first-of-type .vc-lane-stat{ color:var(--muted); }
+   lane — the signal color should only mark the one thing worth noticing (the improved result).
+   :first-of-type counts by tag, and .vc-label is the same tag ahead of it, so .vc-lane is never
+   really first — mirror the adjacent-sibling pattern above (line 1091) that actually matches. */
+.vc-label + .vc-lane .vc-lane-stat{ color:var(--muted); }
 
 /* Tótems: tap card -> accepted -> ticket, looping */
 .vc-stage{ position:relative; height:196px; }

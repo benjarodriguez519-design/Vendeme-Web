@@ -1,5 +1,31 @@
 // Vendeme — comportamiento compartido entre páginas
 (function(){
+  // A plain link click into a page the browser already has in this tab's session history
+  // (e.g. "Conoce el POS" -> pos.html, visited earlier in the session) can get its old scroll
+  // position restored instead of opening at the top. Force top-of-page, but only on a genuine
+  // fresh navigation — never on reload or an actual back/forward, where restoring scroll is right.
+  (function(){
+    var navEntries = window.performance && performance.getEntriesByType && performance.getEntriesByType('navigation');
+    var navType = (navEntries && navEntries[0]) ? navEntries[0].type
+      : (window.performance && performance.navigation ? ['navigate','reload','back_forward'][performance.navigation.type] : 'navigate');
+    if(navType !== 'navigate') return;
+    if('scrollRestoration' in history){ history.scrollRestoration = 'manual'; }
+    var toTop = function(){ if(window.scrollY > 0 || document.documentElement.scrollTop > 0) window.scrollTo(0, 0); };
+    toTop();
+    window.addEventListener('load', toTop);
+    setTimeout(toTop, 0);
+  })();
+
+  // Current-page nav state: every page ships the same 6 tool links with no way to tell
+  // which one you're on (Impeccable /clarify, P3) — mark it via aria-current, no per-page markup.
+  document.addEventListener('DOMContentLoaded', function(){
+    var here = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a, .nav-mobile a').forEach(function(a){
+      var href = a.getAttribute('href');
+      if(href === here) a.setAttribute('aria-current', 'page');
+    });
+  });
+
   // Reveal-on-scroll
   document.addEventListener('DOMContentLoaded', function(){
     var revealEls = document.querySelectorAll('.content-block, .cta-banner, .panel, .nosotros .row, .contact-grid, .ticket-banner-caption, .chapter-finale, .tool-grid');
