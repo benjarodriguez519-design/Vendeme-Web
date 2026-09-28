@@ -236,6 +236,8 @@ header.nav-open .nav-mobile{display:block;}
   flex:1; border-bottom:1px dotted rgba(36,31,25,0.4); transform:translateY(-3px);
 }
 .receipt-row .tag{ flex:none; color:var(--paper-muted); font-size:12px; }
+/* static signifier that the row leads somewhere — :hover alone never reaches a touch visitor */
+.receipt-row::after{ content:"›"; flex:none; color:var(--paper-muted); font-weight:700; margin-left:2px; }
 .receipt-total{
   display:flex; justify-content:space-between; align-items:baseline;
   font-size:14px; font-weight:700; margin-top:2px;
@@ -249,7 +251,7 @@ header.nav-open .nav-mobile{display:block;}
     var(--paper-text) 10px 13px, transparent 13px 15px,
     var(--paper-text) 15px 16px, transparent 16px 22px);
 }
-.receipt-id{ text-align:center; font-size:10px; color:var(--paper-muted); margin-top:6px; letter-spacing:0.06em; }
+.receipt-id{ text-align:center; font-size:11px; color:var(--paper-muted); margin-top:6px; letter-spacing:0.06em; }
 
 @keyframes receipt-feed{
   from{ clip-path:inset(0 0 100% 0); transform:translateY(-24px) rotate(-1.6deg); }
@@ -395,7 +397,7 @@ section.block{
 .contact-copy p{color:var(--muted); margin-top:16px; max-width:42ch;}
 .contact-card{ border:1px solid var(--line); border-radius:20px; padding:32px; background:var(--surface); }
 .contact-row{
-  display:flex; flex-direction:column; gap:5px;
+  position:relative; display:flex; flex-direction:column; gap:5px;
   padding:16px 0; border-bottom:1px solid var(--line);
 }
 .contact-row:last-child{border-bottom:none;}
@@ -405,7 +407,11 @@ section.block{
 .contact-row a, .contact-row > span:last-child{
   font-size:17px; font-weight:600; word-break:break-word;
 }
+.contact-row a{ position:relative; }
+.contact-row a::after{ content:""; position:absolute; inset:-16px -4px; }
 .contact-row a:hover{color:var(--amber);}
+.contact-actions{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.contact-actions .sep{ color:var(--muted); font-weight:400; }
 .contact-person{ display:flex; align-items:center; gap:12px; margin-top:22px; }
 .avatar{
   width:40px; height:40px; border-radius:50%; background:var(--bg-alt);
@@ -439,7 +445,7 @@ section.block{
 .cal-nav:disabled:hover{ border-color:var(--line); color:var(--text); }
 .cal-weekdays{
   display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); text-align:center;
-  font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--muted);
+  font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted);
   text-transform:uppercase; letter-spacing:.04em; margin-bottom:10px;
 }
 .cal-grid{ display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:5px; }
@@ -449,6 +455,10 @@ section.block{
   border:1px solid transparent; cursor:pointer;
   transition:background .15s ease, border-color .15s ease, color .15s ease, transform .15s ease;
 }
+/* the visible cell can't reach 44px on a phone-width 7-column grid without the calendar
+   overflowing its card — an invisible hit area closes the rest of the gap so the tap
+   target still hits 44px even though the drawn square stays smaller */
+.cal-day:not(.is-empty)::before{ content:""; position:absolute; inset:-3px; }
 .cal-day:hover{ border-color:var(--amber); color:var(--amber); transform:translateY(-1px); }
 .cal-day.is-today{ border-color:var(--amber-dim); font-weight:700; }
 .cal-day.is-disabled{ color:var(--muted); opacity:.32; cursor:not-allowed; background:transparent; }
@@ -456,8 +466,9 @@ section.block{
 .cal-day.is-empty{ visibility:hidden; cursor:default; }
 @media (max-width:860px){
   .availability{ grid-template-columns:1fr; gap:28px; margin-top:48px; padding-top:40px; }
-  .availability-calendar{ padding:16px; }
-  .cal-grid{ gap:4px; }
+  .availability-calendar{ padding:10px; }
+  .cal-grid{ gap:3px; }
+  .cal-day:not(.is-empty)::before{ inset:-2px; }
 }
 
 /* Modal: date inquiry */
@@ -484,7 +495,7 @@ section.block{
   width:54px; height:54px; border-radius:12px; background:var(--bg-alt); border:1px solid var(--line);
   margin-bottom:16px;
 }
-.avail-date-badge .m{ font-family:'JetBrains Mono', monospace; font-size:10px; color:var(--amber); text-transform:uppercase; letter-spacing:.04em; }
+.avail-date-badge .m{ font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--amber); text-transform:uppercase; letter-spacing:.04em; }
 .avail-date-badge .d{ font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:19px; line-height:1.1; }
 .avail-modal-card h3{ font-size:20px; }
 .avail-modal-card > p{ color:var(--muted); font-size:14px; margin-top:8px; }
@@ -536,7 +547,7 @@ footer{padding:56px 0 32px;}
 .app-plat{ font-size:12.5px; color:var(--muted); }
 .app-plat a{ color:var(--muted); }
 .app-plat a:hover{ color:var(--amber); }
-.app-plat .sep{ margin:0 6px; color:var(--line); }
+.app-plat .sep{ margin:0 6px; color:var(--muted); }
 .footer-bottom{
   display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
   padding-top:24px; font-size:13px; color:var(--muted);
@@ -673,7 +684,7 @@ section.content-block.has-visual .wrap{ max-width:1040px; }
 .vc-photo-tag{
   position:absolute; left:10px; bottom:10px; display:inline-flex; align-items:center; gap:6px;
   padding:5px 10px; border-radius:20px; background:rgba(20,18,16,.72); backdrop-filter:blur(6px);
-  font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--text);
+  font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--text);
 }
 .vc-photo-tag svg{ width:13px; height:13px; color:var(--amber); }
 .vc .report-type-row{ margin:0 0 12px; }
@@ -691,7 +702,7 @@ section.content-block.has-visual .wrap{ max-width:1040px; }
   content:""; position:absolute; left:-24px; top:50%; width:14px; height:14px; border-radius:50%;
   background:var(--bg-alt); border:2px solid var(--amber); transform:translateY(-50%);
 }
-.vc-step small{ display:block; margin-bottom:3px; font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--amber); text-transform:uppercase; letter-spacing:.06em; }
+.vc-step small{ display:block; margin-bottom:3px; font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--amber); text-transform:uppercase; letter-spacing:.06em; }
 .vc-step strong{ display:block; color:var(--text); font-size:14px; }
 .vc-step span{ font-size:12px; color:var(--muted); }
 
@@ -738,7 +749,7 @@ section.content-block.has-visual .wrap{ max-width:1040px; }
 
 .vc-pill{
   flex:none; padding:3px 9px; border-radius:20px; border:1px solid var(--line);
-  font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em;
+  font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em;
 }
 .vc-pill.on{ color:#171310; background:var(--amber); border-color:var(--amber); font-weight:700; }
 
@@ -791,7 +802,7 @@ section.content-block.has-visual .wrap{ max-width:1040px; }
   background:var(--bg); border:1px solid var(--line);
 }
 .vc-node b{ display:block; color:var(--text); font-size:14px; }
-.vc-node small{ display:block; margin-top:3px; font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--muted); }
+.vc-node small{ display:block; margin-top:3px; font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); }
 .vc-node.on{ border-color:var(--amber); box-shadow:0 0 0 3px rgba(255,87,35,.12); }
 .vc-node.on small{ color:var(--amber); }
 .vc-node.opt{ animation:vc-light 8s ease-in-out infinite; animation-delay:calc(var(--i) * 1.6s); }
@@ -850,7 +861,7 @@ section.content-block.has-visual .wrap{ max-width:1040px; }
 .vc-merge-svg path{ fill:none; stroke:currentColor; stroke-width:2; stroke-dasharray:4 4; vector-effect:non-scaling-stroke; }
 .vc-merge-arrow{ display:none; text-align:center; color:var(--amber); font-size:18px; line-height:1; }
 .vc-chip{ padding:12px 14px; border-radius:14px; background:var(--bg); border:1px solid var(--line); }
-.vc-chip small{ display:block; margin-bottom:3px; font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+.vc-chip small{ display:block; margin-bottom:3px; font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
 .vc-chip strong{ display:block; color:var(--text); font-size:13.5px; }
 .vc-chip.out{ border-color:var(--amber); padding:16px 14px; }
 .vc-chip.out small{ color:var(--amber); }
@@ -865,7 +876,7 @@ section.content-block.has-visual .wrap{ max-width:1040px; }
 .vc-chip.out .vc-tags{ display:flex; flex-wrap:wrap; gap:5px; margin-top:10px; }
 .vc-chip.out .vc-tags i{
   font-style:normal; padding:3px 8px; border-radius:20px; border:1px solid var(--amber-dim);
-  font-family:'JetBrains Mono', monospace; font-size:10px; color:var(--muted);
+  font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted);
 }
 
 /* Clientes: sales curve that draws itself, plus a stat trio */
@@ -947,7 +958,7 @@ section.content-block.has-visual .wrap{ max-width:1040px; }
 .vc-stepcard h3{ margin:6px 0 8px; font-size:23px; }
 section.content-block .vc-stepcard p{ margin:0; max-width:none; font-size:14px; line-height:1.5; color:var(--muted); }
 .vc-scene{ margin-top:auto; padding-top:20px; display:flex; flex-direction:column; justify-content:flex-end; gap:7px; min-height:112px; }
-.vc-noterow{ display:flex; align-items:center; gap:9px; font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--muted); }
+.vc-noterow{ display:flex; align-items:center; gap:9px; font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); }
 .vc-noterow::before{ content:""; width:6px; height:6px; border-radius:50%; flex:none; background:var(--amber); }
 .vc-noterow b{ font-weight:400; color:var(--text); }
 .vc-skel{ height:8px; border-radius:4px; background:var(--line); }
@@ -960,7 +971,7 @@ section.content-block .vc-stepcard p{ margin:0; max-width:none; font-size:14px; 
 .vc-loop{ display:flex; align-items:center; gap:12px; }
 .vc-loop svg{ width:44px; height:44px; flex:none; fill:none; stroke:var(--amber); stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; animation:vc-spin 14s linear infinite; }
 @keyframes vc-spin{ to{ transform:rotate(360deg); } }
-.vc-loop span{ font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--muted); line-height:1.5; }
+.vc-loop span{ font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); line-height:1.5; }
 .vc-loop b{ display:block; font-weight:400; color:var(--text); }
 @media (max-width:900px){
   .vc-steps{
@@ -987,7 +998,7 @@ section.content-block .vc-stepcard p{ margin:0; max-width:none; font-size:14px; 
 .vc-route .from{ padding:6px 13px; border-radius:20px; background:var(--amber); color:#171310; font-weight:800; font-size:12.5px; }
 .vc-route .sep{ color:var(--amber-dim); font-size:14px; }
 .vc-route .to{ padding:5px 11px; border-radius:20px; border:1px solid var(--line); color:var(--muted); font-size:12px; }
-.vc-hint{ margin-top:12px; font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--muted); }
+.vc-hint{ margin-top:12px; font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); }
 
 /* Home: entry-point cards ("where should you start?"), same grid/carousel as the Nosotros step cards */
 #puertas{ display:block; min-height:auto; }
@@ -1001,7 +1012,7 @@ section.content-block .vc-stepcard p{ margin:0; max-width:none; font-size:14px; 
 .vc-doorcard h3{ margin:6px 0 8px; font-size:24px; }
 .vc-doorcard p{ margin:0; font-size:14px; line-height:1.5; color:var(--muted); }
 .vc-doorcard .add{ margin-top:auto; padding-top:20px; }
-.vc-doorcard .add small{ display:block; margin-bottom:8px; font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+.vc-doorcard .add small{ display:block; margin-bottom:8px; font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
 .vc-doorcard .vc-route{ border-top:none; padding:0; }
 /* Impeccable /quieter, P2: one .kicker already carries the section's signal; the 4 repeated cards
    (icon + eyebrow + link, x4) no longer each carry their own amber — quiet until hovered */
@@ -1030,20 +1041,20 @@ section.content-block .vc-stepcard p{ margin:0; max-width:none; font-size:14px; 
 .vc-zone{
   position:absolute; display:flex; align-items:flex-end; padding:7px 9px; border-radius:10px;
   border:1px solid var(--line); background:rgba(255,255,255,.025);
-  font-family:'JetBrains Mono', monospace; font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em;
+  font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em;
 }
 .vc-zone.dashed{ border-style:dashed; }
 .vc-zone.tables{ background:radial-gradient(circle 5px, rgba(167,156,142,.35) 96%, transparent) 0 0 / 30px 30px, rgba(255,255,255,.025); }
 .vc-pos{ position:absolute; width:12px; height:12px; margin:-6px 0 0 -6px; border-radius:4px; background:var(--amber); box-shadow:0 0 0 4px rgba(255,87,35,.2); }
 .vc-pos::after{ content:""; position:absolute; inset:-1px; border-radius:4px; border:1px solid var(--amber); animation:vc-ripple 2.6s ease-out infinite; animation-delay:calc(var(--i) * .5s); }
-.vc-floor-legend{ display:flex; justify-content:space-between; gap:10px; margin-top:12px; font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--muted); }
+.vc-floor-legend{ display:flex; justify-content:space-between; gap:10px; margin-top:12px; font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); }
 .vc-floor-legend i{ display:inline-block; width:9px; height:9px; margin-right:6px; border-radius:3px; background:var(--amber); vertical-align:middle; }
 
 /* POS + Tótems: the same catalogue and stock on two devices, in step */
 @property --stock{ syntax:'<integer>'; inherits:false; initial-value:120; }
 .vc-sync{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
 .vc-stockcard{ padding:14px; border-radius:14px; background:var(--bg); border:1px solid var(--line); min-width:0; }
-.vc-stockcard small{ display:block; font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+.vc-stockcard small{ display:block; font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
 .vc-stockcard b{ display:block; margin:8px 0 10px; font-size:13px; font-weight:600; color:var(--text); }
 .vc-stock{ counter-reset:stock var(--stock); animation:vc-stock 12s steps(1, end) infinite; font-family:'Bricolage Grotesque', sans-serif; font-size:38px; line-height:1; color:var(--text); font-variant-numeric:tabular-nums; }
 .vc-stock::after{ content:counter(stock); }
@@ -1073,14 +1084,14 @@ section.content-block .vc-stepcard p{ margin:0; max-width:none; font-size:14px; 
 /* Tótems: waiting lines, with and without self-service points */
 .vc-lane{ display:flex; align-items:center; gap:14px; padding:14px 0; border-top:1px solid var(--line); }
 .vc-label + .vc-lane{ border-top:none; padding-top:2px; }
-.vc-lane-title{ flex:none; width:86px; font-family:'JetBrains Mono', monospace; font-size:10.5px; line-height:1.4; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; }
+.vc-lane-title{ flex:none; width:86px; font-family:'JetBrains Mono', monospace; font-size:11px; line-height:1.4; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; }
 .vc-lane-body{ flex:1; min-width:0; display:flex; flex-direction:column; gap:9px; }
 .vc-qrow{ display:flex; align-items:center; gap:14px; }
 .vc-queue{ display:flex; flex:1; flex-wrap:wrap; gap:5px; min-width:0; }
 .vc-queue i{ width:11px; height:11px; border-radius:50%; background:var(--muted); opacity:.35; animation:vc-wait 3.2s ease-in-out infinite; animation-delay:calc(var(--i) * .16s); }
 @keyframes vc-wait{ 0%, 100%{ opacity:.3; } 45%{ opacity:.9; background:var(--amber); } }
 .vc-point{ flex:none; width:24px; height:24px; border-radius:7px; border:2px solid var(--amber); }
-.vc-lane-stat{ margin-top:2px; font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--amber); }
+.vc-lane-stat{ margin-top:2px; font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--amber); }
 /* Impeccable /colorize, P2: the same amber was marking the problem lane and the solution
    lane — the signal color should only mark the one thing worth noticing (the improved result) */
 .vc-lane:first-of-type .vc-lane-stat{ color:var(--muted); }
@@ -1124,7 +1135,6 @@ section.content-block .vc-stepcard p{ margin:0; max-width:none; font-size:14px; 
 .vc-map svg{ position:absolute; inset:0; width:100%; height:100%; }
 .vc-map svg path{ fill:none; stroke:rgba(96,124,255,.2); stroke-width:14; stroke-linecap:round; }
 .vc-map-pin{ position:absolute; left:52%; top:46%; width:16px; height:16px; margin:-8px 0 0 -8px; border-radius:50%; background:var(--amber); box-shadow:0 0 0 5px rgba(255,87,35,.22); }
-.vc-map-pin::after{ content:""; position:absolute; inset:-1px; border-radius:50%; border:1px solid var(--amber); animation:vc-ripple 2.4s ease-out infinite; }
 .vc-map-tag{
   position:absolute; left:52%; top:46%; transform:translate(18px, -50%); white-space:nowrap;
   padding:7px 12px; border-radius:20px; background:var(--surface); border:1px solid var(--amber-dim);
@@ -1145,12 +1155,16 @@ section.content-block .vc-stepcard p{ margin:0; max-width:none; font-size:14px; 
 }
 
 @media (prefers-reduced-motion: reduce){
-  .vc-feed-list, .vc-toast, .vc-tally-btn.plus::after, .vc-live::before, .vc-node.opt, .claim-scan, .claim-stamp, .vc-merge-svg.flow path, .vc-eq i, .vc-loop svg, .vc-moment, .vc-foot::before, .vc-map-pin::after, .rcpt-row, .rcpt-qr, .vc-pos::after, .vc-stock, .vc-queue i, .vc-state, .vc-cardico::after{ animation:none; }
+  .vc-feed-list, .vc-toast, .vc-tally-btn.plus::after, .vc-live::before, .vc-node.opt, .claim-scan, .claim-stamp, .vc-merge-svg.flow path, .vc-eq i, .vc-loop svg, .vc-moment, .vc-foot::before, .rcpt-row, .rcpt-qr, .vc-pos::after, .vc-stock, .vc-queue i, .vc-state, .vc-cardico::after{ animation:none; }
   .vc-state:first-child{ opacity:1; }
   .vc-toast{ opacity:1; }
   .claim-stamp{ opacity:.92; }
   .reveal .vc-line, .reveal .vc-area, .reveal .vc-now, .reveal .vc-ring{ transition:none; }
   .reveal .vc-bar.grow i, .reveal .vc-spark i{ transition:none; }
+  /* the feed is static without the scroll animation — tall enough to show all 6 unique rows
+     (not just the first 5), so the one warn-state row isn't the sole event nobody with reduced
+     motion ever sees */
+  .vc-feed{ height:284px; }
 }
 
 /* Full-bleed cinematic photo break, caption fading into the page */
@@ -1292,7 +1306,7 @@ section.content-block .vc-stepcard p{ margin:0; max-width:none; font-size:14px; 
 .totem-screen-frame .screen-panel.center.active{ transform:scale(1.09); }
 .totem-screen-frame .screen-panel.center .qr-grid{ margin:8px auto 0; }
 .totem-screen-frame h4, .totem-screen-frame .mock-title{ font-size:14px; margin-bottom:10px; }
-.totem-screen-frame .device-row{ font-size:10.5px; padding:7px 9px; }
+.totem-screen-frame .device-row{ font-size:11px; padding:7px 9px; }
 /* Impeccable /layout, P2: on the dedicated Tótems page (not the smaller home-page preview),
    the desktop mockup was rendering *smaller* than the mobile fix this session landed at. */
 #totems-device img{ max-width:340px; }
@@ -1345,7 +1359,7 @@ section.content-block .vc-stepcard p{ margin:0; max-width:none; font-size:14px; 
   gap:16px; text-align:center; padding:32px 20px;
 }
 .ticket-qr-full .event{ font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); }
-.ticket-qr-full .holder{ font-family:'JetBrains Mono', monospace; font-size:10px; color:var(--muted); }
+.ticket-qr-full .holder{ font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); }
 
 /* Guardarropía tool-visual: the claim ticket itself, in the same paper language as the hero receipt */
 .claim-ticket{
@@ -1399,6 +1413,7 @@ section.content-block .vc-stepcard p{ margin:0; max-width:none; font-size:14px; 
   appearance:none; border:none; background:none; cursor:pointer;
   font-family:'Nunito Sans', sans-serif; font-size:12.5px; font-weight:700;
   color:var(--muted); padding:7px 16px; border-radius:16px; transition:background .18s ease, color .18s ease;
+  display:inline-flex; align-items:center; justify-content:center; min-height:44px;
 }
 .cv-btn.active{ background:var(--amber); color:#171310; }
 
@@ -1551,6 +1566,15 @@ section.content-block .vc-stepcard p{ margin:0; max-width:none; font-size:14px; 
   #pos-device .pos-screen-frame .device-row, #totems-device .totem-screen-frame .device-row{
     font-size:11px; padding:7px 8px; margin-bottom:5px; gap:6px;
   }
+
+  /* same illegible-mockup bug, home page's smaller chapter preview of the same two devices */
+  #home-pos-device img, #home-totems-device img{ max-width:none; max-height:340px; }
+  .tool-stage.is-photo:has(#home-pos-device), .tool-stage.is-photo:has(#home-totems-device){ min-height:380px; }
+  #home-pos-device .pos-screen-frame h4, #home-totems-device .totem-screen-frame h4,
+  #home-pos-device .pos-screen-frame .mock-title, #home-totems-device .totem-screen-frame .mock-title{ font-size:11px; margin-bottom:5px; }
+  #home-pos-device .pos-screen-frame .device-row, #home-totems-device .totem-screen-frame .device-row{
+    font-size:11px; padding:6px 7px; margin-bottom:4px; gap:5px;
+  }
 }
 
 /* ===== 3D scene (legacy, kept for pages that still reference it) ===== */
@@ -1612,7 +1636,7 @@ section.content-block .vc-stepcard p{ margin:0; max-width:none; font-size:14px; 
   background:linear-gradient(135deg, var(--amber-dim), var(--bg));
 }
 .event-card .name{font-size:11px; font-weight:700; color:var(--text);}
-.event-card .date{font-size:10px; color:var(--muted); margin-top:2px;}
+.event-card .date{font-size:11px; color:var(--muted); margin-top:2px;}
 .cartelera-cta{
   margin:0 22px 22px; padding:11px; text-align:center;
   background:var(--amber); color:#171310; border-radius:8px; font-weight:700; font-size:13px;
@@ -1686,8 +1710,11 @@ section.content-block .vc-stepcard p{ margin:0; max-width:none; font-size:14px; 
   #ticketing-pin .mini-browser{ width:380px; }
 }
 @media (max-width:860px){
-  #ticketing-pin .mini-browser{ width:min(440px, 84vw); }
-  #ticketing-pin .mini-phone{ zoom:0.82; }
+  /* phones: one device, at full size, instead of two shrunken ones (same reasoning as #clientes-pin
+     below — the buyer viewing this page on a phone gets no value from a scaled-down web screenshot) */
+  #ticketing-pin .pin-visual-row .pin-visual-side:first-child{ display:none; }
+  #ticketing-pin .pin-visual-row .pin-visual-side:last-child{ justify-content:center; width:100%; }
+  #ticketing-pin .mini-phone{ zoom:1; }
 }
 
 /* Clientes pin: both mockups sit close to the centre and are big enough to read (the phone's 12px text was

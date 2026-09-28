@@ -744,6 +744,7 @@
       }
       clearError(venueInput.closest('.avail-field'));
       clearError(contactInput.closest('.avail-field'));
+      if(contactErrorEl) contactErrorEl.textContent = contactErrorDefault;
       fallback.hidden = true;
       modal.classList.add('open');
       document.body.style.overflow = 'hidden';
@@ -781,6 +782,18 @@
         if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
         else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
       }
+    });
+
+    // Soft, non-blocking shape hint: catches an obvious typo (neither an "@" nor a digit in the
+    // field) without stopping submission — the hard empty-check on submit below still gates that.
+    var contactErrorEl = document.getElementById('avail-contact-error');
+    var contactErrorDefault = contactErrorEl ? contactErrorEl.textContent : '';
+    contactInput.addEventListener('blur', function(){
+      var val = contactInput.value.trim();
+      var field = contactInput.closest('.avail-field');
+      var looksOff = val && val.indexOf('@') === -1 && !/\d/.test(val);
+      field.classList.toggle('has-error', looksOff);
+      if(contactErrorEl) contactErrorEl.textContent = looksOff ? '¿Es un correo o celular? Revisa el formato.' : contactErrorDefault;
     });
 
     availForm.addEventListener('submit', function(e){
